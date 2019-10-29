@@ -21,8 +21,6 @@ public class Page2 extends AppCompatActivity {
                 Intent i = new Intent(Page2.this, AccommodationPage.class);
 
                 startActivity(i);
-
-                finish();
             }
         });
 

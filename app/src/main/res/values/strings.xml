@@ -14,4 +14,19 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+    <string name="btnAccommodation">Accommodation</string>
+    <string name="btnDates">Dates</string>
+    <string name="btnDestination">Destination</string>
+    <string name="btnDepart">Depart</string>
+    <string name="btnCreate">Create</string>
+    <string name="btnExisting">Existing</string>
+    <string name="btnDoneDestination">DONE</string>
+    <string name="checkAlaska">Alaska Cruises</string>
+    <string name="checkBahamas">Bahamas Cruises</string>
+    <string name="checkCaribbean">Caribbean Cruises</string>
+    <string name="checkHawaii">Hawaii Cruises</string>
+    <string name="checkMexico">Mexico Cruises</string>
+    <string name="checkBermuda">Bermuda Cruises</string>
+    <string name="checkEurope">Europe Cruises</string>
+    <string name="btnResetDestination">RESET</string>
 </resources>

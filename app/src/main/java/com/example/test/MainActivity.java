@@ -13,10 +13,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button btn1 = (Button) findViewById(R.id.button);
-        final Button btn2 = (Button) findViewById(R.id.button2);
+        final Button btnCreate = (Button) findViewById(R.id.btnCreate);
+        final Button btnExisting = (Button) findViewById(R.id.btnExisting);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, Page2.class);

@@ -13,16 +13,28 @@ public class Page2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
 
-        final Button btn3 = (Button) findViewById(R.id.button3);
+        final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
+        Button btnDates=(Button)findViewById(R.id.buttonDates);
+        Button btnDestination=(Button)findViewById(R.id.buttonDestinations);
+        Button btnDepart=(Button)findViewById(R.id.buttonDepart);
 
-        btn3.setOnClickListener(new View.OnClickListener() {
+        btnAccommodation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Page2.this, AccommodationPage.class);
-
-                startActivity(i);
+                Intent intentAccommodation = new Intent(Page2.this, AccommodationPage.class);
+                startActivity(intentAccommodation);
             }
         });
+
+
+        btnDestination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentDestination=new Intent(Page2.this,Destination_Page.class);
+                startActivity(intentDestination);
+            }
+        });
+
 
     }
 }

@@ -29,4 +29,17 @@
     <string name="checkBermuda">Bermuda Cruises</string>
     <string name="checkEurope">Europe Cruises</string>
     <string name="btnResetDestination">RESET</string>
+    <string name="Date1">January</string>
+    <string name="Date2">February</string>
+    <string name="Date3">March</string>
+    <string name="Date4">April</string>
+    <string name="Date5">May</string>
+    <string name="Date6">June</string>
+    <string name="Date7">July</string>
+    <string name="Date8">August</string>
+    <string name="Date9">Septermber</string>
+    <string name="Date10">October</string>
+    <string name="Date11">Novermber</string>
+    <string name="Date12">December</string>
+    <string name="DateYear">2020</string>
 </resources>

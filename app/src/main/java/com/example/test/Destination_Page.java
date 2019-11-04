@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,10 +36,12 @@ public class Destination_Page extends AppCompatActivity {
             public void onClick(View view) {
                 if(alaskaCheck.isChecked()){
                     Toast.makeText(Destination_Page.this, "Alaska Checked",Toast.LENGTH_LONG).show();
+                    finish();
                 }
                 else {
                     Toast.makeText(Destination_Page.this,"Please Choose One Of This Destinations",Toast.LENGTH_LONG).show();
                 }
+
             }
         });
 

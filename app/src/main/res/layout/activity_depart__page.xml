@@ -4,116 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Destination_Page">
-
-    <TextView
-        android:id="@+id/txtWarningDestination"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/warningDestination"
-
-        android:textColor="#F2000C"
-        android:textStyle="italic" />
+    tools:context=".Depart_Page">
 
     <CheckBox
-    android:id="@+id/checkboxAlaska"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_marginTop="100dp"
-    android:text="@string/checkAlaska"
-    android:layout_marginLeft="40dp"
-    android:layout_marginStart="40dp"
+        android:id="@+id/checkboxVancouverBCCanada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/checkVancouverCanada"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:textSize="22sp"
-    />
+        />
 
     <CheckBox
-        android:id="@+id/checkboxBahamas"
+        android:id="@+id/checkboxBarcelonaSpain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/checkboxAlaska"
+        android:layout_below="@id/checkboxBarcelonaSpain"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="152dp"
-        android:text="@string/checkBahamas"
+        android:text="@string/checkBarcelonaSpain"
         android:textSize="22sp"/>
 
     <CheckBox
-        android:id="@+id/checkboxBermuda"
+        android:id="@+id/checkboxCopenhagenDenmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/checkboxBahamas"
+        android:layout_below="@id/checkboxCopenhagenDenmark"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="208dp"
-        android:text="@string/checkBermuda"
+        android:text="@string/checkCopenhagenDenmark"
         android:textSize="22sp"/>
 
     <CheckBox
-        android:id="@+id/checkboxCaribbean"
+        android:id="@+id/checkboxSanJuanPuertoRico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="267dp"
-        android:text="@string/checkCaribbean"
+        android:text="@string/checkSanJuanPuertoRico"
         android:textSize="22sp"/>
 
     <CheckBox
-        android:id="@+id/checkboxEurope"
+        android:id="@+id/checkboxPortCanaveralFlorida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="320dp"
-        android:text="@string/checkEurope"
+        android:text="@string/checkPortCanaveralFlorida"
         android:textSize="22sp"/>
 
     <CheckBox
-        android:id="@+id/checkboxHawaii"
+        android:id="@+id/checkboxSanDiegoCalifornia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="373dp"
-        android:text="@string/checkHawaii"
+        android:text="@string/checkSanDiegoCalifornia"
         android:textSize="22sp"/>
 
     <CheckBox
-        android:id="@+id/checkboxMexico"
+        android:id="@+id/checkboxHonoluluHawaii"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="427dp"
-        android:text="@string/checkMexico"
+        android:text="@string/checkHonoluluHawaii"
         android:textSize="22sp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
-        android:id="@+id/btnDoneDestination"
-        android:text="@string/btnDoneDestination"
+        android:id="@+id/btnDoneDepart"
+        android:text="@string/btnDoneDepart"
         android:textSize="22sp"
         android:layout_marginBottom="8dp"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnResetDestination"
-        android:layout_below="@id/btnDoneDestination"
+        android:id="@+id/btnResetDepart"
+        android:layout_below="@id/btnDoneDepart"
         android:textSize="22sp"
-        android:text="@string/btnResetDestination"
+        android:text="@string/btnResetDepart"
         />
-
 </RelativeLayout>

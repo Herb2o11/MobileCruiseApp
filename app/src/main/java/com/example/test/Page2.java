@@ -35,6 +35,14 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
+        btnDepart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentDepart = new Intent(Page2.this,Depart_Page.class);
+                startActivity(intentDepart);
+            }
+        });
+
 
     }
 }

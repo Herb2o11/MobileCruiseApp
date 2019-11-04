@@ -35,6 +35,7 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
         btnDepart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,17 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
+=======
+        btnDates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentDates = new Intent(Page2.this,DateSelection.class);
+                startActivity(intentDates);
+            }
+        });
+
+
+>>>>>>> f221547cd8a71b92c52e65c99926b925b4c90fec
 
     }
 }

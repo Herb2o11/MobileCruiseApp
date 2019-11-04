@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
     tools:context=".Destination_Page">
 
     <TextView
@@ -19,16 +20,15 @@
         android:textStyle="italic" />
 
     <CheckBox
-    android:id="@+id/checkboxAlaska"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_marginTop="100dp"
-    android:text="@string/checkAlaska"
-    android:layout_marginLeft="40dp"
-    android:layout_marginStart="40dp"
-        android:textSize="22sp"
-    />
+        android:id="@+id/checkboxAlaska"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/checkAlaska"
+        android:textSize="22sp" />
 
     <CheckBox
         android:id="@+id/checkboxBahamas"
@@ -40,7 +40,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="152dp"
         android:text="@string/checkBahamas"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <CheckBox
         android:id="@+id/checkboxBermuda"
@@ -52,7 +52,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="208dp"
         android:text="@string/checkBermuda"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <CheckBox
         android:id="@+id/checkboxCaribbean"
@@ -63,7 +63,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="267dp"
         android:text="@string/checkCaribbean"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <CheckBox
         android:id="@+id/checkboxEurope"
@@ -74,7 +74,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="320dp"
         android:text="@string/checkEurope"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <CheckBox
         android:id="@+id/checkboxHawaii"
@@ -85,7 +85,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="373dp"
         android:text="@string/checkHawaii"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <CheckBox
         android:id="@+id/checkboxMexico"
@@ -96,24 +96,23 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="427dp"
         android:text="@string/checkMexico"
-        android:textSize="22sp"/>
+        android:textSize="22sp" />
 
     <Button
+        android:id="@+id/btnDoneDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
-        android:id="@+id/btnDoneDestination"
-        android:text="@string/btnDoneDestination"
-        android:textSize="22sp"
         android:layout_marginBottom="8dp"
-        />
+        android:text="@string/btnDoneDestination"
+        android:textSize="22sp" />
+
     <Button
+        android:id="@+id/btnResetDestination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnResetDestination"
         android:layout_below="@id/btnDoneDestination"
-        android:textSize="22sp"
         android:text="@string/btnResetDestination"
-        />
+        android:textSize="22sp" />
 
 </RelativeLayout>

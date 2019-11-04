@@ -29,4 +29,15 @@
     <string name="checkBermuda">Bermuda Cruises</string>
     <string name="checkEurope">Europe Cruises</string>
     <string name="btnResetDestination">RESET</string>
+    <string name="checkVancouver">Vancouver</string>
+    // String Depart
+    <string name="checkVancouverCanada">Vancouver,Bc,Canada</string>
+    <string name="checkBarcelonaSpain">Barcelona,Spain</string>
+    <string name="checkCopenhagenDenmark">Copenhagen,Denmark</string>
+    <string name="checkSanJuanPuertoRico">San Juan,Puerto Rico</string>
+    <string name="checkPortCanaveralFlorida">Port Canaveral, Florida</string>
+    <string name="checkSanDiegoCalifornia">San Diego, California</string>
+    <string name="checkHonoluluHawaii">Honolulu, Hawaii</string>
+    <string name="btnDoneDepart">DONE</string>
+    <string name="btnResetDepart">RESET</string>
 </resources>

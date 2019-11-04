@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Depart_Page">
+
+    <CheckBox
+        android:id="@+id/checkboxVancouverBCCanada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/checkVancouverCanada"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:textSize="22sp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkboxBarcelonaSpain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxBarcelonaSpain"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/checkBarcelonaSpain"
+        android:textSize="22sp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxCopenhagenDenmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxCopenhagenDenmark"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="208dp"
+        android:text="@string/checkCopenhagenDenmark"
+        android:textSize="22sp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxSanJuanPuertoRico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="267dp"
+        android:text="@string/checkSanJuanPuertoRico"
+        android:textSize="22sp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxPortCanaveralFlorida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/checkPortCanaveralFlorida"
+        android:textSize="22sp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxSanDiegoCalifornia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="373dp"
+        android:text="@string/checkSanDiegoCalifornia"
+        android:textSize="22sp"/>
+
+    <CheckBox
+        android:id="@+id/checkboxHonoluluHawaii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="427dp"
+        android:text="@string/checkHonoluluHawaii"
+        android:textSize="22sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:id="@+id/btnDoneDepart"
+        android:text="@string/btnDoneDepart"
+        android:textSize="22sp"
+        android:layout_marginBottom="8dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnResetDepart"
+        android:layout_below="@id/btnDoneDepart"
+        android:textSize="22sp"
+        android:text="@string/btnResetDepart"
+        />
+</RelativeLayout>

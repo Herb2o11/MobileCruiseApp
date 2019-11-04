@@ -29,7 +29,7 @@
     <string name="checkBermuda">Bermuda Cruises</string>
     <string name="checkEurope">Europe Cruises</string>
     <string name="btnResetDestination">RESET</string>
-<<<<<<< HEAD
+
     <string name="Date1">January</string>
     <string name="Date2">February</string>
     <string name="Date3">March</string>
@@ -38,15 +38,14 @@
     <string name="Date6">June</string>
     <string name="Date7">July</string>
     <string name="Date8">August</string>
-    <string name="Date9">Septermber</string>
+    <string name="Date9">September</string>
     <string name="Date10">October</string>
-    <string name="Date11">Novermber</string>
+    <string name="Date11">November</string>
     <string name="Date12">December</string>
     <string name="DateYear">2020</string>
-=======
-<<<<<<< HEAD
+
     <string name="checkVancouver">Vancouver</string>
-    // String Depart
+
     <string name="checkVancouverCanada">Vancouver,Bc,Canada</string>
     <string name="checkBarcelonaSpain">Barcelona,Spain</string>
     <string name="checkCopenhagenDenmark">Copenhagen,Denmark</string>
@@ -56,8 +55,7 @@
     <string name="checkHonoluluHawaii">Honolulu, Hawaii</string>
     <string name="btnDoneDepart">DONE</string>
     <string name="btnResetDepart">RESET</string>
-=======
+
     <string name="warningDestination">Unfortunately Only Alaska Available Right Now!!!</string>
->>>>>>> 4d1dbc03824144856137e04e4cb7a82735a799bf
->>>>>>> 036ba1db5799cf401419c5f8f930b93642ea7da1
+
 </resources>

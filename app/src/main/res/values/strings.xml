@@ -29,6 +29,7 @@
     <string name="checkBermuda">Bermuda Cruises</string>
     <string name="checkEurope">Europe Cruises</string>
     <string name="btnResetDestination">RESET</string>
+<<<<<<< HEAD
     <string name="checkVancouver">Vancouver</string>
     // String Depart
     <string name="checkVancouverCanada">Vancouver,Bc,Canada</string>
@@ -40,4 +41,7 @@
     <string name="checkHonoluluHawaii">Honolulu, Hawaii</string>
     <string name="btnDoneDepart">DONE</string>
     <string name="btnResetDepart">RESET</string>
+=======
+    <string name="warningDestination">Unfortunately Only Alaska Available Right Now!!!</string>
+>>>>>>> 4d1dbc03824144856137e04e4cb7a82735a799bf
 </resources>

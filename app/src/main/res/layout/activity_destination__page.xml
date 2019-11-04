@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Destination_Page">
 
+    <TextView
+        android:id="@+id/txtWarningDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/warningDestination"
+
+        android:textColor="#F2000C"
+        android:textStyle="italic" />
+
     <CheckBox
     android:id="@+id/checkboxAlaska"
     android:layout_width="wrap_content"

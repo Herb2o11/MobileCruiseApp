@@ -29,4 +29,5 @@
     <string name="checkBermuda">Bermuda Cruises</string>
     <string name="checkEurope">Europe Cruises</string>
     <string name="btnResetDestination">RESET</string>
+    <string name="warningDestination">Unfortunately Only Alaska Available Right Now!!!</string>
 </resources>

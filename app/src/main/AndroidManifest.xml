@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity android:name=".DateSelection"></activity>
-=======
+
         <activity android:name=".Depart_Page"></activity>
->>>>>>> 036ba1db5799cf401419c5f8f930b93642ea7da1
+
         <activity android:name=".Destination_Page" />
         <activity android:name=".AccommodationPage" />
         <activity android:name=".Page2" />

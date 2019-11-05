@@ -36,9 +36,20 @@ public class Depart_Page extends AppCompatActivity {
             public void onClick(View v) {
                 if(vancouverCanada.isChecked()){
                     Toast.makeText(Depart_Page.this, "Vancouver Checked",Toast.LENGTH_LONG).show();
+                    finish();
+                }else {
 
+                    Toast.makeText(Depart_Page.this,"Please Choose One Of This Departure Locations",Toast.LENGTH_LONG).show();
                 }
             }
+        });
+
+        btnresetDepart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vancouverCanada.setChecked(false);
+            }
+
         });
 
 

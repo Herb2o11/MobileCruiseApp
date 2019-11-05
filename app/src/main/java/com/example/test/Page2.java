@@ -44,6 +44,10 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f1f86a931a30035af133db6441f35d820f3d4e84
         btnDates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

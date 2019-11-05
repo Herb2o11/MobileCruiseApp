@@ -51,5 +51,7 @@ public class Destination_Page extends AppCompatActivity {
                 alaskaCheck.setChecked(false);
             }
         });
+
+
     }
 }

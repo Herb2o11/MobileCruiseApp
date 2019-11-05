@@ -35,7 +35,7 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD
+
         btnDepart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +44,7 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
-=======
+
         btnDates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +54,7 @@ public class Page2 extends AppCompatActivity {
         });
 
 
->>>>>>> f221547cd8a71b92c52e65c99926b925b4c90fec
+
 
     }
 }

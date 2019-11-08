@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".DateSelection"></activity>
-
-        <activity android:name=".Depart_Page"></activity>
-
+        <activity android:name=".Register"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DateSelection" />
+        <activity android:name=".Depart_Page" />
         <activity android:name=".Destination_Page" />
         <activity android:name=".AccommodationPage" />
         <activity android:name=".Page2" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

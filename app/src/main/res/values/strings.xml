@@ -70,6 +70,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+<<<<<<< HEAD
     <string name="txtSignUpPage">Sign Up</string>
     <string name="hintEmail">Email</string>
     <string name="hintPassword">Password</string>
@@ -77,5 +78,8 @@
     <string name="hintName">Name</string>
     <string name="hintPhone">Phone</string>
     <string name="hintAddress">Address</string>
+=======
+    <string name="ApplicationDisplayName">Disney Cruise</string>
+>>>>>>> 2a8bf208882a0593687138ee65f9043448a501bf
 
 </resources>

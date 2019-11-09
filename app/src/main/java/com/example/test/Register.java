@@ -2,6 +2,7 @@ package com.example.test;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -17,6 +18,12 @@ public class Register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ActionBar actionbar = getSupportActionBar();
+        getSupportActionBar().setTitle("Disney Cruise");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         Intent i = getIntent();
         if (i != null)
             isEdit = i.getBooleanExtra("isEdit", false);

@@ -4,19 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".Welcome">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtWelcome"
-        android:layout_marginTop="24dp"
-        android:id="@+id/txtWelcome"
-        android:textColor="@android:color/black"
-        android:textSize="60sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        />
 
     <ImageView
         android:id="@+id/imgLogoDisney"
@@ -28,9 +18,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="23dp"
         android:layout_marginLeft="23dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="109dp"
         android:contentDescription="@string/imgDescriptionWelcome"
-        app:srcCompat="@drawable/disneylogo" />
+        app:srcCompat="@drawable/waltdisneylogo" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -38,19 +28,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imgLogoDisney"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="55dp"
         android:text="@string/btnLogInWelcome" />
+
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
-        android:text="@string/btnSignUpWelcome"
         android:layout_below="@id/btnLogin"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="23dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="23dp"
-        />
-
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/btnSignUpWelcome" />
 
 
 </RelativeLayout>

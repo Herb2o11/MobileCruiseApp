@@ -16,7 +16,6 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        ActionBar actionbar = getSupportActionBar();
         getSupportActionBar().setTitle("Home");
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);

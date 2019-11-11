@@ -5,12 +5,13 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class Register extends AppCompatActivity {
     TextInputLayout tiEmail, tiPassword, tiConfirmPassword, tiName, tiPhone, tiAddress, tiEmailRecommend;
-    EditText etEmail, etPassword, etConfirmPassword, etName, etPhone, etAddress, etEmailRecommend;
+    EditText etEmail, etPassword, etConfirmPassword, etName, etPhone, etAddress;
     Button btnSubmit;
 
     Boolean isEdit;
@@ -39,7 +40,18 @@ public class Register extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etPhone = findViewById(R.id.etPhone);
         etAddress = findViewById(R.id.etAddress);
-
         btnSubmit = findViewById(R.id.btnSingUpPage);
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String getEmailStr=etEmail.getText().toString();
+                String getPasswordStr=etPassword.getText().toString();
+                String getPasswordConfStr=etConfirmPassword.getText().toString();
+                String getNameStr=etName.getText().toString();
+                int getPhone=Integer.parseInt(etPhone.getText().toString());
+                String getAddressStr=etAddress.getText().toString();
+            }
+        });
     }
 }

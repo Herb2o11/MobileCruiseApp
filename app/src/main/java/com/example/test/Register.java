@@ -42,15 +42,41 @@ public class Register extends AppCompatActivity {
         etAddress = findViewById(R.id.etAddress);
         btnSubmit = findViewById(R.id.btnSingUpPage);
 
+        final UserDAO userDAO = new UserDAO(Register.this);
+
+        userDAO.getAllUsers();
+
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String getEmailStr=etEmail.getText().toString();
                 String getPasswordStr=etPassword.getText().toString();
                 String getPasswordConfStr=etConfirmPassword.getText().toString();
                 String getNameStr=etName.getText().toString();
                 int getPhone=Integer.parseInt(etPhone.getText().toString());
                 String getAddressStr=etAddress.getText().toString();
+
+                //implemented to pass the data
+                User user = new User();
+                user.setEmail(getEmailStr);
+                user.setPassword(getPasswordStr);
+                user.setPasswordConfirmation(getPasswordConfStr);
+                user.setName(getNameStr);
+                user.setPhone(getPhone);
+                user.setAddress(getAddressStr);
+
+                userDAO.registerUser(user);
+
+
+
+
+
+
+
+
+
+
             }
         });
     }

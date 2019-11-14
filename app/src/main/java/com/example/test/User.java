@@ -7,7 +7,7 @@ public class User {
     String Password;
     String PasswordConfirmation;
     String Name;
-    int Phone;
+    long Phone;
     String Address;
 
     public String getEmail() {
@@ -42,11 +42,11 @@ public class User {
         Name = name;
     }
 
-    public int getPhone() {
+    public long getPhone() {
         return Phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(long phone) {
         Phone = phone;
     }
 

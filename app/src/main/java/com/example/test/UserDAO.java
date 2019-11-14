@@ -27,18 +27,18 @@ public class UserDAO extends CruiseDataBase {
         contentValues.put("Phone",u.getPhone());
         contentValues.put("Address",u.getAddress());
         contentValues.put("Password",u.getPassword());
-        long i = myData.insert("User_Table",null,contentValues);
+        long i = myData.insert("users",null,contentValues);
         return  i;
     }
 
+
+    //check later, used to confirm data put on users table
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery("select * from user_table", null);
-        if(c.getCount() > 0) {
-            Log.d("DBX", "USER" + c.getString(1));
-        } else {
-            Log.d("DBX", "NOBODY");
+        Cursor c = db.rawQuery("select * from users", null);
+        while (c.moveToNext()) {
+            Log.d("DBX", "USERS" + c.getString(0));
         }
         return null;
     }

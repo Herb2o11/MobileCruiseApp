@@ -5,9 +5,11 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
     TextInputLayout tiEmail, tiPassword, tiConfirmPassword, tiName, tiPhone, tiAddress, tiEmailRecommend;
@@ -54,7 +56,7 @@ public class Register extends AppCompatActivity {
                 String getPasswordStr=etPassword.getText().toString();
                 String getPasswordConfStr=etConfirmPassword.getText().toString();
                 String getNameStr=etName.getText().toString();
-                int getPhone=Integer.parseInt(etPhone.getText().toString());
+                long getPhone=Long.parseLong(etPhone.getText().toString());
                 String getAddressStr=etAddress.getText().toString();
 
                 //implemented to pass the data
@@ -66,17 +68,13 @@ public class Register extends AppCompatActivity {
                 user.setPhone(getPhone);
                 user.setAddress(getAddressStr);
 
-                userDAO.registerUser(user);
+                long savedId = userDAO.registerUser(user);
+                Log.d("REGISTER", String.valueOf(savedId));
 
+                Toast.makeText(Register.this,"Registration Completed",Toast.LENGTH_LONG).show();
 
-
-
-
-
-
-
-
-
+                Intent ii = new Intent(Register.this,Page2.class);
+                startActivity(ii);
             }
         });
     }

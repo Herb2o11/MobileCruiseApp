@@ -31,7 +31,12 @@ public class CruiseDataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
     //db.execSQL("create table " + TABLE_NAME+" (USERID INTEGER PRIMARY KEY AUTOINCREMENT,USER_NAME TEXT,USER_LAST_NAME TEXT ,USER_DATE_ID INTEGER)");
       db.execSQL(TableDefinition.SQL_CREATE_USER_TABLE);
+
+      //tables need to be created avoiding the foreign key problem
+
+
       db.execSQL(TableDefinition.SQL_CREATE_DATES_TABLE);
+      /*
       db.execSQL(TableDefinition.SQL_CREATE_DESTINATION_TABLE);
       db.execSQL(TableDefinition.SQL_CREATE_ACOMODATION_TRAVELPARTY_TABLE);
       db.execSQL(TableDefinition.SQL_CREATE_STATEROOM_TABLE);
@@ -40,6 +45,7 @@ public class CruiseDataBase extends SQLiteOpenHelper {
       db.execSQL(TableDefinition.SQL_CREATE_ADVENTUREPACK);
       db.execSQL(TableDefinition.SQL_CREATE_ORDER);
       db.execSQL(TableDefinition.SQL_CREATE_PAYMENT);
+      */
       Log.d("CruiseDataBase","onCreate");
 
     }
@@ -47,7 +53,9 @@ public class CruiseDataBase extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(TableDefinition.SQL_DELETE_USER_TABLE);
+
         db.execSQL(TableDefinition.SQL_DELETE_DATES_TABLE);
+        /*
         db.execSQL(TableDefinition.SQL_DELETE_DESTINATION_TABLE);
         db.execSQL(TableDefinition.SQL_DELETE_ACOMODATION_TRAVELPARTY_TABLE);
         db.execSQL(TableDefinition.SQL_DELETE_STATEROOM_TABLE);
@@ -56,6 +64,7 @@ public class CruiseDataBase extends SQLiteOpenHelper {
         db.execSQL(TableDefinition.SQL_DELETE_ADVENTUREPACK);
         db.execSQL(TableDefinition.SQL_DELETE_ORDER);
         db.execSQL(TableDefinition.SQL_DELETE_PAYMENT);
+        */
         Log.d("CruiseDataBase","onUpgrade");
 
 

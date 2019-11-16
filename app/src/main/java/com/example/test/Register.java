@@ -75,6 +75,7 @@ public class Register extends AppCompatActivity {
 
                 Intent ii = new Intent(Register.this,Page2.class);
                 startActivity(ii);
+                finish();
             }
         });
     }

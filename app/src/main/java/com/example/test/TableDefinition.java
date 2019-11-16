@@ -18,6 +18,13 @@ public class TableDefinition {
 
     public static final String  SQL_DELETE_DATES_TABLE =
             "DELETE TABLE IF EXISTS DATE";
+
+    public static final String SQL_CREATE_STATEROOM_TABLE =
+            "CREATE TABLE STATEROOM( roomID integer primary key, roomCategory text, roomLocation text, roomPrice decimal," +
+                    "roomType text)";
+
+    public static final String SQL_DELETE_STATEROOM_TABLE =
+            "DELETE TABLE IF EXISTS STATEROOM";
 /*
 
     public static final String SQL_CREATE_DESTINATION_TABLE =
@@ -26,12 +33,9 @@ public class TableDefinition {
     public static final String SQL_DELETE_DESTINATION_TABLE =
             "DELETE TABLE IF EXISTS DESTINATION";
 
-    public static final String SQL_CREATE_STATEROOM_TABLE =
-            "CREATE TABLE STATEROOM( roomID integer primary key, roomCategory text, roomLocation text, roomPrice decimal," +
-                    "roomType text)";
 
-    public static final String SQL_DELETE_STATEROOM_TABLE =
-            "DELETE TABLE IF EXISTS STATEROOM";
+
+
 
     public static final String SQL_CREATE_ACOMODATION_TRAVELPARTY_TABLE =
             "CREATE TABLE ACOMODATION_TRAVELPARTY(trvelPartyId integer primary key, stateRoomQtd integer, adultsQtd integer," +

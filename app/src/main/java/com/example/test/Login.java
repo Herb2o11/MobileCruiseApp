@@ -12,8 +12,6 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     TextInputLayout tiEmail, tiPassword;
-    //EditText etLoginConfirm, etPasswordLogIn;
-    Validation validation;
     UserDAO db;
 
 
@@ -22,11 +20,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        validation = new Validation(this);
         final EditText etEmail = findViewById(R.id.etLoginConfirm);
         final EditText etPassword = findViewById(R.id.etPasswordLogIn);
-//        tiEmail = findViewById(R.id.tiEmail);
-//        tiPassword = findViewById(R.id.tiPassword);
+//
         Button btnSubmit = findViewById(R.id.btnLogInPage);
 
         db = new UserDAO(this);

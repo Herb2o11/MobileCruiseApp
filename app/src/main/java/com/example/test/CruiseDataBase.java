@@ -54,7 +54,7 @@ public class CruiseDataBase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(TableDefinition.SQL_DELETE_USER_TABLE);
+       // db.execSQL(TableDefinition.SQL_DELETE_USER_TABLE);
 
         db.execSQL(TableDefinition.SQL_DELETE_DATES_TABLE);
 

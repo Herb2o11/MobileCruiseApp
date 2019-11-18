@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Page2 extends AppCompatActivity {
 
@@ -14,7 +15,13 @@ public class Page2 extends AppCompatActivity {
         setContentView(R.layout.activity_page2);
 
         final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
-        Button btnDates=(Button)findViewById(R.id.buttonDates);
+        final Button btnDates=(Button)findViewById(R.id.buttonDates);
+        final TextView txtAcc = findViewById(R.id.txtDisplayAcc);
+        final TextView txtDates = findViewById(R.id.txtDisplayMonth);
+        final TextView txtDest = findViewById(R.id.txtDisplayDest);
+        final TextView txtDepart = findViewById(R.id.txtDisplayDepart);
+
+
         Button btnDestination=(Button)findViewById(R.id.buttonDestinations);
         Button btnDepart=(Button)findViewById(R.id.buttonDepart);
 

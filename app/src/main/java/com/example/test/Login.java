@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     TextInputLayout tiEmail, tiPassword;
-    EditText etEmail, etPassword;
+    //EditText etLoginConfirm, etPasswordLogIn;
     Validation validation;
     UserDAO db;
 
@@ -23,19 +23,19 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         validation = new Validation(this);
-        etEmail = findViewById(R.id.etEmail);
-        etPassword = findViewById(R.id.etPassword);
+        final EditText etEmail = findViewById(R.id.etLoginConfirm);
+        final EditText etPassword = findViewById(R.id.etPasswordLogIn);
 //        tiEmail = findViewById(R.id.tiEmail);
 //        tiPassword = findViewById(R.id.tiPassword);
         Button btnSubmit = findViewById(R.id.btnLogInPage);
+
         db = new UserDAO(this);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //crashing when the result match not displaying line error, if don't exist crash showing
-                //line erro login.java:36 since returns as null from the table .
+                // not doing the checking
                 boolean loginOK = db.checkLogin(etEmail.getText().toString(),etPassword.getText().toString());
                 if(loginOK ){
 

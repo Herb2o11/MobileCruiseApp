@@ -4,7 +4,7 @@ public class TableDefinition {
 //table USERS customized to follow the register page
 // check the viability to add more colunms to users table eliminating  dates and destination tables
     public static final String SQL_CREATE_USER_TABLE =
-            "CREATE TABLE USERS (  userid  integer primary key autoincrement, email text, name text, phone text, address text, password text, creditCardInfo float )";
+            "CREATE TABLE USERS (  userid  integer primary key autoincrement, email text, name text, phone text, address text, password integer, creditCardInfo float )";
 
                     /*"(userId integer primary key, userName text, userLastName text, dateID integer foreign key," +
                     "creditCardInfo float, destinationID integer foreign key, departID integer foreign key, phone float, e-mail text, " +

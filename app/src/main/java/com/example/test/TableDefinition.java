@@ -10,8 +10,8 @@ public class TableDefinition {
                     "creditCardInfo float, destinationID integer foreign key, departID integer foreign key, phone float, e-mail text, " +
                     "roomID integer foreign key, travelPartyID integer foreign key)"; */
 
-    //public static final String SQL_DELETE_USER_TABLE =
-         //   "DELETE TABLE IF EXISTS USERS";
+    public static final String SQL_DELETE_USER_TABLE =
+           "DELETE TABLE IF EXISTS USERS";
 
     public static final String SQL_CREATE_DATES_TABLE =
             "CREATE TABLE DATE (dateID integer promary key, month text, year date)";

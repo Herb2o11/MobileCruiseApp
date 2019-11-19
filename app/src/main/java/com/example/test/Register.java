@@ -61,21 +61,24 @@ public class Register extends AppCompatActivity {
 
                 //implemented to pass the data
                 User user = new User();
-                user.setEmail(getEmailStr);
-                user.setPassword(getPasswordStr);
-                user.setPasswordConfirmation(getPasswordConfStr);
-                user.setName(getNameStr);
-                user.setPhone(getPhone);
-                user.setAddress(getAddressStr);
+                if (etPassword==etConfirmPassword){
+                    user.setEmail(getEmailStr);
+                    user.setPassword(getPasswordStr);
+                    user.setPasswordConfirmation(getPasswordConfStr);
+                    user.setName(getNameStr);
+                    user.setPhone(getPhone);
+                    user.setAddress(getAddressStr);
 
-                long savedId = userDAO.registerUser(user);
-                Log.d("REGISTER", String.valueOf(savedId));
-
-                Toast.makeText(Register.this,"Registration Completed",Toast.LENGTH_LONG).show();
-
-                Intent ii = new Intent(Register.this,Page2.class);
-                startActivity(ii);
-                finish();
+                    long savedId = userDAO.registerUser(user);
+                    Log.d("REGISTER", String.valueOf(savedId));
+                    Intent ii = new Intent(Register.this,Page2.class);
+                    startActivity(ii);
+                    finish();
+                    Toast.makeText(Register.this,"Registration Completed",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(Register.this,"Password is not matching",Toast.LENGTH_LONG).show();
+                }
             }
         });
 

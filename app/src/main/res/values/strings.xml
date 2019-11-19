@@ -81,6 +81,14 @@
 
     <string name="ApplicationDisplayName">Disney Cruise</string>
     <string name="txtLoginPage">Log In</string>
+    <string name="select_stateroom_type">Select Stateroom Type</string>
+    <string name="oceanview">OceanView</string>
+    <string name="inside">Inside</string>
+    <string name="these_are_our_most_spacious_non_concierge_staterooms_each_with_a_private_verandah_some_with_partial_views">These are our most spacious non-Concierge staterooms, each with a private verandah (some with partial views).</string>
+    <string name="unwind_in_roomy_quarters_adorned_in_a_charming_nautical_motif_with_a_real_porthole_window_or_possibly_2">Unwind in roomy quarters adorned in a charming nautical motif, with a real porthole window—or possibly 2!</string>
+    <string name="verandah">Verandah</string>
+    <string name="sail_away_in_a_generous_sized_stateroom_with_a_nautical_motif_and_porthole_mirror_no_exterior_view">Sail away in a generous-sized stateroom with a nautical motif and porthole mirror (no exterior view).</string>
+
 
 
 </resources>

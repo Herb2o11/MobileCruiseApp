@@ -16,6 +16,7 @@ public class Page2 extends AppCompatActivity {
 
         final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
         final Button btnDates=(Button)findViewById(R.id.buttonDates);
+        final Button btnStateRoom = (Button)findViewById(R.id.btnStateRoom);
         final TextView txtAcc = findViewById(R.id.txtDisplayAcc);
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
         final TextView txtDest = findViewById(R.id.txtDisplayDest);
@@ -57,6 +58,14 @@ public class Page2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentDates = new Intent(Page2.this,DateSelection.class);
                 startActivity(intentDates);
+            }
+        });
+
+        btnStateRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stateroomintent  = new Intent(Page2.this,StateRoomType.class);
+                startActivity(stateroomintent);
             }
         });
 

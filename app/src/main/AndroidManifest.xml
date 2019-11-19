@@ -9,16 +9,19 @@
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register" />
+        <activity android:name=".Register"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".Login"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"/>
         <activity android:name=".DateSelection" />
         <activity android:name=".Depart_Page" />
         <activity android:name=".Destination_Page" />
         <activity android:name=".AccommodationPage" />
         <activity android:name=".Page2" />
-        <activity android:name=".Welcome">
+        <activity android:name=".Welcome"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

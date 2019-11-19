@@ -16,10 +16,10 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        getSupportActionBar().setTitle("Home");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+//        getSupportActionBar().setTitle("Home");
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         btnLogin=(Button)findViewById(R.id.btnLogin);
         btnRegister=(Button)findViewById(R.id.btnSignUp);

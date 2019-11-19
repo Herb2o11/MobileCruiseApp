@@ -12,20 +12,19 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-    TextInputLayout tiEmail, tiPassword, tiConfirmPassword, tiName, tiPhone, tiAddress, tiEmailRecommend;
     EditText etEmail, etPassword, etConfirmPassword, etName, etPhone, etAddress;
-    Button btnSubmit;
+    Button btnSubmit, btnGoToLoginPage;
 
     Boolean isEdit;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ActionBar actionbar = getSupportActionBar();
-        getSupportActionBar().setTitle("Disney Cruise");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+//        ActionBar actionbar = getSupportActionBar();
+//        getSupportActionBar().setTitle("Disney Cruise");
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         Intent i = getIntent();
         if (i != null)
@@ -43,6 +42,7 @@ public class Register extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhone);
         etAddress = findViewById(R.id.etAddress);
         btnSubmit = findViewById(R.id.btnSingUpPage);
+        btnGoToLoginPage=findViewById(R.id.btnLogInWelcome);
 
         final UserDAO userDAO = new UserDAO(Register.this);
 
@@ -75,6 +75,15 @@ public class Register extends AppCompatActivity {
 
                 Intent ii = new Intent(Register.this,Page2.class);
                 startActivity(ii);
+                finish();
+            }
+        });
+
+        btnGoToLoginPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLoginPage=new Intent(Register.this, Login.class);
+                startActivity(intentLoginPage);
                 finish();
             }
         });

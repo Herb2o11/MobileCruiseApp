@@ -11,20 +11,20 @@ public class TableDefinition {
                     "roomID integer foreign key, travelPartyID integer foreign key)"; */
 
     public static final String SQL_DELETE_USER_TABLE =
-           "DELETE TABLE IF EXISTS USERS";
+           "DROP TABLE IF EXISTS USERS";
 
     public static final String SQL_CREATE_DATES_TABLE =
             "CREATE TABLE DATE (dateID integer promary key, month text, year date)";
 
     public static final String  SQL_DELETE_DATES_TABLE =
-            "DELETE TABLE IF EXISTS DATE";
+            "DROP TABLE IF EXISTS DATE";
 
     public static final String SQL_CREATE_STATEROOM_TABLE =
             "CREATE TABLE STATEROOM( roomID integer primary key, roomCategory text, roomLocation text, roomPrice decimal," +
                     "roomType text)";
 
     public static final String SQL_DELETE_STATEROOM_TABLE =
-            "DELETE TABLE IF EXISTS STATEROOM";
+            "DROP TABLE IF EXISTS STATEROOM";
 /*
 
     public static final String SQL_CREATE_DESTINATION_TABLE =

@@ -61,7 +61,7 @@ public class Register extends AppCompatActivity {
 
                 //implemented to pass the data
                 User user = new User();
-                if (etPassword==etConfirmPassword){
+                if (getPasswordStr.equals(getPasswordConfStr)){
                     user.setEmail(getEmailStr);
                     user.setPassword(getPasswordStr);
                     user.setPasswordConfirmation(getPasswordConfStr);

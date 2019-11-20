@@ -1,6 +1,5 @@
 package com.example.test;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class AccommodationPage extends AppCompatActivity {
+public class AccommodationPageActivity extends AppCompatActivity {
 
     int i = 1;
     int adults, children;
@@ -35,7 +34,7 @@ public class AccommodationPage extends AppCompatActivity {
         spinnerAdults.add("3");
         spinnerAdults.add("4");
 
-        final ArrayAdapter<String> spinnerAdultsAdapter = new ArrayAdapter<String>(AccommodationPage.this, android.R.layout.simple_spinner_dropdown_item, spinnerAdults);
+        final ArrayAdapter<String> spinnerAdultsAdapter = new ArrayAdapter<String>(AccommodationPageActivity.this, android.R.layout.simple_spinner_dropdown_item, spinnerAdults);
 
         ArrayList<String> spinnerChildren = new ArrayList<String>();
         spinnerChildren.add("0");
@@ -44,19 +43,19 @@ public class AccommodationPage extends AppCompatActivity {
         spinnerChildren.add("3");
         spinnerChildren.add("4");
 
-        final ArrayAdapter<String> spinnerChildrenAdapter = new ArrayAdapter<String>(AccommodationPage.this, android.R.layout.simple_spinner_dropdown_item, spinnerChildren);
+        final ArrayAdapter<String> spinnerChildrenAdapter = new ArrayAdapter<String>(AccommodationPageActivity.this, android.R.layout.simple_spinner_dropdown_item, spinnerChildren);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (i <= 4) {
-                    TableRow newSR = new TableRow(AccommodationPage.this);
-                    TextView txtSR = new TextView(AccommodationPage.this);
-                    TextView txtSR1 = new TextView(AccommodationPage.this);
-                    TextView txtSR2 = new TextView(AccommodationPage.this);
-                    Spinner spin1 = new Spinner(AccommodationPage.this);
-                    Spinner spin2 = new Spinner(AccommodationPage.this);
-                    Button btnD = new Button(AccommodationPage.this);
+                    TableRow newSR = new TableRow(AccommodationPageActivity.this);
+                    TextView txtSR = new TextView(AccommodationPageActivity.this);
+                    TextView txtSR1 = new TextView(AccommodationPageActivity.this);
+                    TextView txtSR2 = new TextView(AccommodationPageActivity.this);
+                    Spinner spin1 = new Spinner(AccommodationPageActivity.this);
+                    Spinner spin2 = new Spinner(AccommodationPageActivity.this);
+                    Button btnD = new Button(AccommodationPageActivity.this);
                     txtSR.setText(String.format("Stateroom %1d:", i));
                     txtSR1.setText("\tAdults: ");
                     spin1.setAdapter(spinnerAdultsAdapter);
@@ -83,8 +82,8 @@ public class AccommodationPage extends AppCompatActivity {
                     i++;
                 }
                 else {
-                    Toast.makeText(AccommodationPage.this, excess, Toast.LENGTH_LONG).show();
-                    /*Button btnD = new Button(AccommodationPage.this);
+                    Toast.makeText(AccommodationPageActivity.this, excess, Toast.LENGTH_LONG).show();
+                    /*Button btnD = new Button(AccommodationPageActivity.this);
                     tblLayout.addView(btnD);
                     btnD.setOnClickListener(new View.OnClickListener() {
                         @Override

@@ -39,7 +39,7 @@ public class Page2 extends AppCompatActivity {
         btnAccommodation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAccommodation = new Intent(Page2.this, AccommodationPage.class);
+                Intent intentAccommodation = new Intent(Page2.this, AccommodationPageActivity.class);
                 startActivity(intentAccommodation);
             }
         });
@@ -57,7 +57,7 @@ public class Page2 extends AppCompatActivity {
         btnDepart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentDepart = new Intent(Page2.this,Depart_Page.class);
+                Intent intentDepart = new Intent(Page2.this, DeparturePageActivity.class);
                 startActivity(intentDepart);
             }
         });

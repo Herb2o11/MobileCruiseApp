@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-public class Depart_Page extends AppCompatActivity {
+public class DeparturePageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +35,11 @@ public class Depart_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(vancouverCanada.isChecked()){
-                    Toast.makeText(Depart_Page.this, "Vancouver Checked",Toast.LENGTH_LONG).show();
+                    Toast.makeText(DeparturePageActivity.this, "Vancouver Checked",Toast.LENGTH_LONG).show();
                     finish();
                 }else {
 
-                    Toast.makeText(Depart_Page.this,"Please Choose One Of This Departure Locations",Toast.LENGTH_LONG).show();
+                    Toast.makeText(DeparturePageActivity.this,"Please Choose One Of This Departure Locations",Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.test.ShipLocation">
+
+    <Button
+        android:id="@+id/btnAft"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/aft_custom_button"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnMidShip"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/midship_custom_btn"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginStart="140dp"
+
+        />
+    <Button
+        android:id="@+id/btnForward"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/forward_custom_btn"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginStart="250dp"
+        />
+
+
+
+        <Button
+            android:id="@+id/btnDeck1Aft"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:text=""
+            android:layout_below="@+id/btnMidShip"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:visibility="invisible"
+            />
+        <Button
+            android:id="@+id/btnDeck2Aft"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:text=""
+            android:layout_below="@id/btnDeck1Aft"
+            android:visibility="invisible"
+            />
+        <Button
+            android:id="@+id/btnDeck3Aft"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:layout_below="@+id/btnDeck2Aft"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:visibility="invisible"
+            />
+    <Button
+        android:id="@+id/btnDeck1Mid"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:layout_below="@+id/btnMidShip"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/btnDeck2Mid"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:text=""
+        android:layout_below="@id/btnDeck1Mid"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/btnDeck3Mid"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:layout_below="@+id/btnDeck2Mid"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/btnDeck1Forward"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:text=""
+        android:layout_below="@+id/btnMidShip"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/btnDeck2Forward"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:text=""
+        android:layout_below="@id/btnDeck1Forward"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/btnDeck3Forward"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:layout_below="@+id/btnDeck2Forward"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:visibility="invisible"
+        />
+
+
+
+
+</RelativeLayout>

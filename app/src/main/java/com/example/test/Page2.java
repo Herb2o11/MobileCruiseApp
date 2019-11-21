@@ -1,6 +1,8 @@
 package com.example.test;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +19,7 @@ public class Page2 extends AppCompatActivity {
         final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
         final Button btnDates=(Button)findViewById(R.id.buttonDates);
         final Button btnStateRoom = (Button)findViewById(R.id.btnStateRoom);
-        //final TextView txtAcc = findViewById(R.id.txtDisplayAcc);
+
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
         final TextView txtDest = findViewById(R.id.txtDisplayDest);
         final TextView txtDepart = findViewById(R.id.txtDisplayDepart);
@@ -27,9 +29,17 @@ public class Page2 extends AppCompatActivity {
         Button btnDepart=(Button)findViewById(R.id.buttonDepart);
 
         try {
-            Intent intent = getIntent();
-            String displayMonth = intent.getExtras().getString("month", "");
-            txtDates.setText(displayMonth);
+            SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
+            String showMonth = sharedPreferences.getString("month"," N/A ");
+            String showDest = sharedPreferences.getString("dest"," N/A ");
+            String showDepart = sharedPreferences.getString("depart","N/A");
+            txtDates.setText(showMonth);
+            txtDest.setText(showDest);
+            txtDepart.setText(showDepart);
+
+            //Intent intent = getIntent();
+            //String displayMonth = intent.getExtras().getString("month", "");
+            //txtDates.setText(displayMonth);
 
         }catch (Exception e){
 

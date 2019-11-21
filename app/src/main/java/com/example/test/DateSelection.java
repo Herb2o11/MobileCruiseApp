@@ -1,6 +1,8 @@
 package com.example.test;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -60,31 +62,7 @@ public class DateSelection extends AppCompatActivity {
         radioGroup1.setOnCheckedChangeListener(listener1);
         radioGroup2.setOnCheckedChangeListener(listener2);
 
-/*        CheckBox checkDate1 = (CheckBox) findViewById(R.id.checkBoxDate1);
-        CheckBox checkDate2 = (CheckBox) findViewById(R.id.checkBoxDate2);
-        CheckBox checkDate3 = (CheckBox) findViewById(R.id.checkBoxDate3);
-        CheckBox checkDate4 = (CheckBox) findViewById(R.id.checkBoxDate4);
-        final CheckBox checkDate5 = (CheckBox) findViewById(R.id.checkBoxDate5);
-        final CheckBox checkDate6 = (CheckBox) findViewById(R.id.checkBoxDate6);
-        final CheckBox checkDate7 = (CheckBox) findViewById(R.id.checkBoxDate7);
-        final CheckBox checkDate8 = (CheckBox) findViewById(R.id.checkBoxDate8);
-        final CheckBox checkDate9 = (CheckBox) findViewById(R.id.checkBoxDate9);
-        CheckBox checkDate10 = (CheckBox) findViewById(R.id.checkBoxDate10);
-        CheckBox checkDate11= (CheckBox) findViewById(R.id.checkBoxDate11);
-        CheckBox checkDate12= (CheckBox) findViewById(R.id.checkBoxDate12);
-        Button btnDoneDate = (Button) findViewById(R.id.btnDoneDateSelection);
-        Button btnResetDate = (Button) findViewById(R.id.btnResetDateSelection);*/
 
-
-
-        //best time to visit may to September
-/*        checkDate1.setEnabled(false);
-        checkDate2.setEnabled(false);
-        checkDate3.setEnabled(false);
-        checkDate4.setEnabled(false);
-        checkDate10.setEnabled(false);
-        checkDate11.setEnabled(false);
-        checkDate12.setEnabled(false);*/
 
         btnDoneDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,9 +76,19 @@ public class DateSelection extends AppCompatActivity {
                     if(checkedId != -1) {
                         RadioButton radioButton = tmpRadioGroup.findViewById(checkedId);
                         Toast.makeText(DateSelection.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
+                        travelMonthSelection = radioButton.getText().toString();
                         break;
                     }
                 }
+                SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("month",travelMonthSelection);
+
+                editor.commit();
+
+                Intent intent = new Intent(DateSelection.this,Page2.class);
+                startActivity(intent);
+
             }
         });
 

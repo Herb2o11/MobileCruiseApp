@@ -20,11 +20,7 @@ public class Register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        ActionBar actionbar = getSupportActionBar();
-//        getSupportActionBar().setTitle("Disney Cruise");
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
-//        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
         Intent i = getIntent();
         if (i != null)

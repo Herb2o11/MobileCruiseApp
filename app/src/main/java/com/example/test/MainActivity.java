@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Page2.class);
+                Intent i = new Intent(MainActivity.this, PageSelectionActivity.class);
 
                 startActivity(i);
             }

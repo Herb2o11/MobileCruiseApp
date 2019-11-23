@@ -5,6 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="300dp">
 
+    <RadioGroup
+        android:id="@+id/rdBtnGrpRoomCategory"
+        android:layout_width="116dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_adv_info"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rdButtonStandard"
+            android:layout_width="116dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:text="Standard"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Intermediate"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rdButtonDeluxe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Deluxe"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="203dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Standard Room Measures : Sleeps: 3 to 4 Size: Approximately 184 sq. ft."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rdBtnGrpRoomCategory"
+        app:layout_constraintTop_toBottomOf="@+id/txt_adv_info"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/header_image"
         android:layout_width="0dp"
@@ -16,7 +76,7 @@
         app:srcCompat="@drawable/insidestateroom" />
 
     <TextView
-        android:id="@+id/txt_room_name"
+        android:id="@+id/txt_adv_name"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="28dp"
@@ -25,10 +85,10 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_image"
-        tools:text="Standart Inside Room" />
+        tools:text="Standard Inside Room" />
 
     <TextView
-        android:id="@+id/txt_room_deck"
+        android:id="@+id/txt_adv_info"
         android:layout_width="332dp"
         android:layout_height="33dp"
         android:layout_marginStart="28dp"
@@ -37,10 +97,10 @@
         android:text="Deck 2 - Category 11C"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_room_name" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_adv_name" />
 
     <TextView
-        android:id="@+id/txt_price_dummy"
+        android:id="@+id/txt_advprice_dummy"
         android:layout_width="wrap_content"
         android:layout_height="11dp"
         android:layout_marginTop="16dp"
@@ -64,6 +124,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/txt_price_dummy"
+        app:layout_constraintStart_toEndOf="@+id/txt_advprice_dummy"
         app:layout_constraintTop_toBottomOf="@+id/header_image" />
+
 </android.support.constraint.ConstraintLayout>

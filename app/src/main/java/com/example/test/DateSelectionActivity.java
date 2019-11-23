@@ -7,18 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DateSelection extends AppCompatActivity {
+public class DateSelectionActivity extends AppCompatActivity {
     String travelMonthSelection;
 
     RadioGroup radioGroup;
@@ -75,7 +71,7 @@ public class DateSelection extends AppCompatActivity {
                     int checkedId = tmpRadioGroup.getCheckedRadioButtonId();
                     if(checkedId != -1) {
                         RadioButton radioButton = tmpRadioGroup.findViewById(checkedId);
-                        Toast.makeText(DateSelection.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DateSelectionActivity.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
                         travelMonthSelection = radioButton.getText().toString();
                         break;
                     }
@@ -86,7 +82,7 @@ public class DateSelection extends AppCompatActivity {
 
                 editor.commit();
 
-                Intent intent = new Intent(DateSelection.this,Page2.class);
+                Intent intent = new Intent(DateSelectionActivity.this, PageSelectionActivity.class);
                 startActivity(intent);
 
             }

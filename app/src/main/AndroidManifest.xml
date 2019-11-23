@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShipLocation"></activity>
-        <activity android:name=".StateRoomType" />
+        <activity android:name=".AdventurePackActivity"></activity>
+        <activity android:name=".ShipLocation" />
+        <activity android:name=".StateRoomTypeActivity" />
         <activity
             android:name=".Register"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".Login"
+            android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".DateSelection" />
+        <activity android:name=".DateSelectionActivity" />
         <activity android:name=".DeparturePageActivity" />
-        <activity android:name=".Destination_Page" />
+        <activity android:name=".DestinationPageActivity" />
         <activity android:name=".AccommodationPageActivity" />
-        <activity android:name=".Page2" />
+        <activity android:name=".PageSelectionActivity" />
         <activity
             android:name=".Welcome"
             android:theme="@style/Theme.AppCompat.NoActionBar">

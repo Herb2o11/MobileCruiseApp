@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-public class Destination_Page extends AppCompatActivity {
+public class DestinationPageActivity extends AppCompatActivity {
 
     String departSelected;
     @Override
@@ -44,13 +44,13 @@ public class Destination_Page extends AppCompatActivity {
                     editor.putString("dest",departSelected);
                     editor.commit();
 
-                    Toast.makeText(Destination_Page.this, "Alaska Checked",Toast.LENGTH_LONG).show();
+                    Toast.makeText(DestinationPageActivity.this, "Alaska Checked",Toast.LENGTH_LONG).show();
                     //finish();
-                    Intent intent = new Intent(Destination_Page.this,Page2.class);
+                    Intent intent = new Intent(DestinationPageActivity.this, PageSelectionActivity.class);
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(Destination_Page.this,"Please Choose One Of This Destinations",Toast.LENGTH_LONG).show();
+                    Toast.makeText(DestinationPageActivity.this,"Please Choose One Of This Destinations",Toast.LENGTH_LONG).show();
                 }
 
             }

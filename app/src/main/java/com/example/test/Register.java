@@ -1,8 +1,6 @@
 package com.example.test;
 
 import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -67,7 +65,7 @@ public class Register extends AppCompatActivity {
 
                     long savedId = userDAO.registerUser(user);
                     Log.d("REGISTER", String.valueOf(savedId));
-                    Intent ii = new Intent(Register.this,Page2.class);
+                    Intent ii = new Intent(Register.this, PageSelectionActivity.class);
                     startActivity(ii);
                     finish();
                     Toast.makeText(Register.this,"Registration Completed",Toast.LENGTH_LONG).show();
@@ -81,7 +79,7 @@ public class Register extends AppCompatActivity {
         btnGoToLoginPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoginPage=new Intent(Register.this, Login.class);
+                Intent intentLoginPage=new Intent(Register.this, LoginActivity.class);
                 startActivity(intentLoginPage);
                 finish();
             }

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class StateRoomType extends AppCompatActivity {
+public class StateRoomTypeActivity extends AppCompatActivity {
 
     LinearLayout linearLayout;
     List<StateRoomEntity> stateRoomEntities = new ArrayList<>();
@@ -41,11 +41,11 @@ public class StateRoomType extends AppCompatActivity {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(StateRoomType.this, "testImageclick", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StateRoomTypeActivity.this, "testImageclick", Toast.LENGTH_SHORT).show();
                 }
             });
-            TextView txtName = view.findViewById(R.id.txt_room_name);
-            TextView txtDeck = view.findViewById(R.id.txt_room_deck);
+            TextView txtName = view.findViewById(R.id.txt_adv_name);
+            TextView txtDeck = view.findViewById(R.id.txt_adv_info);
             TextView txtPrice = view.findViewById(R.id.txt_price);
 
             imageView.setImageDrawable(getResources().getDrawable(stateRoomEntity.getImage()));

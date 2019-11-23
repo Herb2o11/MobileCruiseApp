@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdventurePackActivity"></activity>
+        <activity android:name="com.example.cruiseapp.ConfirmSelectionActivity"></activity>
+        <activity android:name=".AdventurePackActivity" />
         <activity android:name=".ShipLocation" />
         <activity android:name=".StateRoomTypeActivity" />
         <activity

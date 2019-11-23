@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.cruiseapp.ConfirmSelectionActivity;
+
 public class PageSelectionActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +22,7 @@ public class PageSelectionActivity extends AppCompatActivity {
         final Button btnDates=(Button)findViewById(R.id.buttonDates);
         final Button btnStateRoom = (Button)findViewById(R.id.btnStateRoom);
         Button btnFindPrice=(Button)findViewById(R.id.btnFindPrice);
+        final Button btngoConfirm=(Button)findViewById(R.id.btnGoToConfimationPage);
 
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
         final TextView txtDest = findViewById(R.id.txtDisplayDest);
@@ -98,6 +101,15 @@ public class PageSelectionActivity extends AppCompatActivity {
                 
             }
         });
+
+        btngoConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent confirmSelectionAct= new Intent (PageSelectionActivity.this, ConfirmSelectionActivity.class);
+                startActivity(confirmSelectionAct);
+            }
+        });
+
 
     }
 }

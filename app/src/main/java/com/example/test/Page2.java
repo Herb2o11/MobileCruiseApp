@@ -95,7 +95,7 @@ public class Page2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent shipLocationIntent= new Intent (Page2.this,ShipLocation.class);
                 startActivity(shipLocationIntent);
-                
+
             }
         });
 

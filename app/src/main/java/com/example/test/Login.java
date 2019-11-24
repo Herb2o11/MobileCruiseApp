@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
-//    TextInputLayout tiEmail, tiPassword;
+
     UserDAO db;
 
 

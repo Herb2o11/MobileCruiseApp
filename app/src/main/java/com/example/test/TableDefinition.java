@@ -14,7 +14,7 @@ public class TableDefinition {
            "DROP TABLE IF EXISTS USERS";
 
     public static final String SQL_CREATE_DATES_TABLE =
-            "CREATE TABLE DATE (dateID integer promary key, month text, year date)";
+            "CREATE TABLE DATE (dateID integer primary key, month text, year date)";
 
     public static final String  SQL_DELETE_DATES_TABLE =
             "DROP TABLE IF EXISTS DATE";

@@ -27,6 +27,7 @@ public class PageSelectionActivity extends AppCompatActivity {
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
         final TextView txtDest = findViewById(R.id.txtDisplayDest);
         final TextView txtDepart = findViewById(R.id.txtDisplayDepart);
+        final TextView txtday = findViewById(R.id.txtDisplayDay);
 
 
         Button btnDestination=(Button)findViewById(R.id.buttonDestinations);
@@ -37,13 +38,12 @@ public class PageSelectionActivity extends AppCompatActivity {
             String showMonth = sharedPreferences.getString("month"," N/A ");
             String showDest = sharedPreferences.getString("dest"," N/A ");
             String showDepart = sharedPreferences.getString("depart","N/A");
+            String shawDay = sharedPreferences.getString("daySelected","N/A");
             txtDates.setText(showMonth);
             txtDest.setText(showDest);
             txtDepart.setText(showDepart);
+            txtday.setText(shawDay);
 
-            //Intent intent = getIntent();
-            //String displayMonth = intent.getExtras().getString("month", "");
-            //txtDates.setText(displayMonth);
 
         }catch (Exception e){
 

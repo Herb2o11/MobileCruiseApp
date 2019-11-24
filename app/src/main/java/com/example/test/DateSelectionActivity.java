@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -16,10 +17,12 @@ import java.util.List;
 
 public class DateSelectionActivity extends AppCompatActivity {
     String travelMonthSelection;
+    String dayselected;
 
     RadioGroup radioGroup;
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
+    CheckBox btn2nd, btn11th, btn21st;
 
     RadioGroup.OnCheckedChangeListener listener1 = new RadioGroup.OnCheckedChangeListener() {
 
@@ -59,6 +62,20 @@ public class DateSelectionActivity extends AppCompatActivity {
         radioGroup2.setOnCheckedChangeListener(listener2);
 
 
+        btn2nd = findViewById(R.id.checkBoxDay2nd);
+        btn11th = findViewById(R.id.checkBoxDay11th);
+        btn21st = findViewById(R.id.checkBoxDay21st);
+
+        if(btn2nd.isChecked()){
+            dayselected  = btn2nd.getText().toString();
+        } else if (btn11th.isChecked()){
+            dayselected  = btn11th.getText().toString();
+        }else if (btn21st.isChecked()){
+            dayselected  = btn21st.getText().toString();
+        }
+
+
+
 
         btnDoneDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +96,7 @@ public class DateSelectionActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("month",travelMonthSelection);
+                editor.putString("daySelected",dayselected);
 
                 editor.commit();
 

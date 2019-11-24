@@ -88,6 +88,10 @@
     <string name="unwind_in_roomy_quarters_adorned_in_a_charming_nautical_motif_with_a_real_porthole_window_or_possibly_2">Unwind in roomy quarters adorned in a charming nautical motif, with a real porthole window—or possibly 2!</string>
     <string name="verandah">Verandah</string>
     <string name="sail_away_in_a_generous_sized_stateroom_with_a_nautical_motif_and_porthole_mirror_no_exterior_view">Sail away in a generous-sized stateroom with a nautical motif and porthole mirror (no exterior view).</string>
+    <string name="dateSelection_2nd">2nd</string>
+    <string name="dateSelection_11th">11th</string>
+    <string name="dateSelection_21st">21st</string>
+    <string name="dateSelection_text_day">Select your desired period to travel</string>
 
 
 </resources>

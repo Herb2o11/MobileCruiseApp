@@ -9,21 +9,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Page2 extends AppCompatActivity {
+import com.example.cruiseapp.ConfirmSelectionActivity;
+
+public class PageSelectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page2);
+        setContentView(R.layout.activity_pageselection);
 
         final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
         final Button btnDates=(Button)findViewById(R.id.buttonDates);
         final Button btnStateRoom = (Button)findViewById(R.id.btnStateRoom);
         Button btnFindPrice=(Button)findViewById(R.id.btnFindPrice);
+        final Button btngoConfirm=(Button)findViewById(R.id.btnGoToConfimationPage);
 
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
         final TextView txtDest = findViewById(R.id.txtDisplayDest);
         final TextView txtDepart = findViewById(R.id.txtDisplayDepart);
+        final TextView txtday = findViewById(R.id.txtDisplayDay);
 
 
         Button btnDestination=(Button)findViewById(R.id.buttonDestinations);
@@ -34,13 +38,12 @@ public class Page2 extends AppCompatActivity {
             String showMonth = sharedPreferences.getString("month"," N/A ");
             String showDest = sharedPreferences.getString("dest"," N/A ");
             String showDepart = sharedPreferences.getString("depart","N/A");
+            String shawDay = sharedPreferences.getString("daySelected","N/A");
             txtDates.setText(showMonth);
             txtDest.setText(showDest);
             txtDepart.setText(showDepart);
+            txtday.setText(shawDay);
 
-            //Intent intent = getIntent();
-            //String displayMonth = intent.getExtras().getString("month", "");
-            //txtDates.setText(displayMonth);
 
         }catch (Exception e){
 
@@ -50,7 +53,7 @@ public class Page2 extends AppCompatActivity {
         btnAccommodation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAccommodation = new Intent(Page2.this, AccommodationPageActivity.class);
+                Intent intentAccommodation = new Intent(PageSelectionActivity.this, AccommodationPageActivity.class);
                 startActivity(intentAccommodation);
             }
         });
@@ -59,7 +62,7 @@ public class Page2 extends AppCompatActivity {
         btnDestination.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentDestination=new Intent(Page2.this,Destination_Page.class);
+                Intent intentDestination=new Intent(PageSelectionActivity.this, DestinationPageActivity.class);
                 startActivity(intentDestination);
             }
         });
@@ -68,7 +71,7 @@ public class Page2 extends AppCompatActivity {
         btnDepart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentDepart = new Intent(Page2.this, DeparturePageActivity.class);
+                Intent intentDepart = new Intent(PageSelectionActivity.this, DeparturePageActivity.class);
                 startActivity(intentDepart);
             }
         });
@@ -77,7 +80,7 @@ public class Page2 extends AppCompatActivity {
         btnDates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentDates = new Intent(Page2.this,DateSelection.class);
+                Intent intentDates = new Intent(PageSelectionActivity.this, DateSelectionActivity.class);
                 startActivity(intentDates);
             }
         });
@@ -85,7 +88,7 @@ public class Page2 extends AppCompatActivity {
         btnStateRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent stateroomintent  = new Intent(Page2.this,StateRoomType.class);
+                Intent stateroomintent  = new Intent(PageSelectionActivity.this, StateRoomTypeActivity.class);
                 startActivity(stateroomintent);
             }
         });
@@ -93,11 +96,20 @@ public class Page2 extends AppCompatActivity {
         btnFindPrice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shipLocationIntent= new Intent (Page2.this,ShipLocation.class);
+                Intent shipLocationIntent= new Intent (PageSelectionActivity.this,ShipLocation.class);
                 startActivity(shipLocationIntent);
 
             }
         });
+
+        btngoConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent confirmSelectionAct= new Intent (PageSelectionActivity.this, ConfirmSelectionActivity.class);
+                startActivity(confirmSelectionAct);
+            }
+        });
+
 
     }
 }

@@ -45,7 +45,7 @@ public class DeparturePageActivity extends AppCompatActivity {
                     editor.putString("depart",depertLocation);
                     editor.commit();
 
-                    Intent intent = new Intent(DeparturePageActivity.this,Page2.class);
+                    Intent intent = new Intent(DeparturePageActivity.this, PageSelectionActivity.class);
                     startActivity(intent);
 
                     //finish();

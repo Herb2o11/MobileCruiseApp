@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -80,6 +81,14 @@ public class ShipLocation extends AppCompatActivity {
                 btnDeck2Mid.setVisibility(View.INVISIBLE);
                 btnDeck3Mid.setVisibility(View.INVISIBLE);
 
+            }
+        });
+
+        btnDeck1Forward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iForwardDeck1=new Intent(ShipLocation.this, SelectRoomForwardDeck1.class);
+                startActivity(iForwardDeck1);
             }
         });
     }

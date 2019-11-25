@@ -88,6 +88,29 @@
     <string name="unwind_in_roomy_quarters_adorned_in_a_charming_nautical_motif_with_a_real_porthole_window_or_possibly_2">Unwind in roomy quarters adorned in a charming nautical motif, with a real porthole window—or possibly 2!</string>
     <string name="verandah">Verandah</string>
     <string name="sail_away_in_a_generous_sized_stateroom_with_a_nautical_motif_and_porthole_mirror_no_exterior_view">Sail away in a generous-sized stateroom with a nautical motif and porthole mirror (no exterior view).</string>
+    <string name="dateSelection_2nd">2nd</string>
+    <string name="dateSelection_11th">11th</string>
+    <string name="dateSelection_21st">21st</string>
+    <string name="dateSelection_text_day">Select your desired period to travel</string>
+    <string name="btnAft">Aft</string>
+    <string name="btnMidShip">MidShip</string>
+    <string name="btnForward">Forward</string>
+    <string name="btnDeck1Aft">Deck 1        +$300</string>
+    <string name="btnDeck2Aft">Deck 2        +$400</string>
+    <string name="btnDeck3Aft">Deck 3        +$500</string>
+    <string name="btnDeck1MidShip">Deck 1        +$200</string>
+    <string name="btnDeck2MidShip">Deck 2        +$300</string>
+    <string name="btnDeck3MidShip">Deck 3        +$400</string>
+    <string name="btnDeck1Forward">Deck 1        +$100</string>
+    <string name="btnDeck2Forward">Deck 2        +$200</string>
+    <string name="btnDeck3Forward">Deck 3        +$300</string>
+    <string name="btnDeck1Forward1000">1000</string>
+    <string name="btnDeck1Forward1002">1002</string>
+    <string name="btnDeck1Forward1004">1004</string>
+    <string name="btnDeck1Forward1006">1006</string>
+    <string name="btnDeck1Forward1008">1008</string>
+    <string name="btnSubmitForwardDeck1">Next</string>
+
 
 
 </resources>

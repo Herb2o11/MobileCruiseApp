@@ -1,7 +1,6 @@
 package com.example.test;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +31,7 @@ public class Welcome extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnLogin:
-                Intent iLogin=new Intent(this, Login.class);
+                Intent iLogin=new Intent(this, LoginActivity.class);
                 startActivity(iLogin);
                 break;
             case R.id.btnSignUp:

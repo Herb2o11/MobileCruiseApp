@@ -10,20 +10,19 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DateSelection extends AppCompatActivity {
+public class DateSelectionActivity extends AppCompatActivity {
     String travelMonthSelection;
+    String dayselected;
 
     RadioGroup radioGroup;
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
+    CheckBox btn2nd, btn11th, btn21st;
 
     RadioGroup.OnCheckedChangeListener listener1 = new RadioGroup.OnCheckedChangeListener() {
 
@@ -63,6 +62,20 @@ public class DateSelection extends AppCompatActivity {
         radioGroup2.setOnCheckedChangeListener(listener2);
 
 
+        btn2nd = findViewById(R.id.checkBoxDay2nd);
+        btn11th = findViewById(R.id.checkBoxDay11th);
+        btn21st = findViewById(R.id.checkBoxDay21st);
+
+        if(btn2nd.isChecked()){
+            dayselected  = btn2nd.getText().toString();
+        } else if (btn11th.isChecked()){
+            dayselected  = btn11th.getText().toString();
+        }else if (btn21st.isChecked()){
+            dayselected  = btn21st.getText().toString();
+        }
+
+
+
 
         btnDoneDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +88,7 @@ public class DateSelection extends AppCompatActivity {
                     int checkedId = tmpRadioGroup.getCheckedRadioButtonId();
                     if(checkedId != -1) {
                         RadioButton radioButton = tmpRadioGroup.findViewById(checkedId);
-                        Toast.makeText(DateSelection.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DateSelectionActivity.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
                         travelMonthSelection = radioButton.getText().toString();
                         break;
                     }
@@ -83,10 +96,11 @@ public class DateSelection extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("month",travelMonthSelection);
+                editor.putString("daySelected",dayselected);
 
                 editor.commit();
 
-                Intent intent = new Intent(DateSelection.this,Page2.class);
+                Intent intent = new Intent(DateSelectionActivity.this, PageSelectionActivity.class);
                 startActivity(intent);
 
             }

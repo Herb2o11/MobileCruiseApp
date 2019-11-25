@@ -110,7 +110,10 @@
     <string name="btnDeck1Forward1006">1006</string>
     <string name="btnDeck1Forward1008">1008</string>
     <string name="btnSubmitForwardDeck1">Next</string>
-
+    <string name="btnGoState">Go to StateRoom</string>
+    <string name="ConfirmStateRoom">Number(s) of Stareroom</string>
+    <string name="ConfirmAdults">Number(s) of Adults</string>
+    <string name="ConfirmKids">Number(s) of Children</string>
 
 
 </resources>

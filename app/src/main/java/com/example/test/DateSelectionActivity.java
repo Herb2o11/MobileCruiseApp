@@ -66,13 +66,7 @@ public class DateSelectionActivity extends AppCompatActivity {
         btn11th = findViewById(R.id.checkBoxDay11th);
         btn21st = findViewById(R.id.checkBoxDay21st);
 
-        if(btn2nd.isChecked()){
-            dayselected  = btn2nd.getText().toString();
-        } else if (btn11th.isChecked()){
-            dayselected  = btn11th.getText().toString();
-        }else if (btn21st.isChecked()){
-            dayselected  = btn21st.getText().toString();
-        }
+
 
 
 
@@ -93,6 +87,15 @@ public class DateSelectionActivity extends AppCompatActivity {
                         break;
                     }
                 }
+
+                if(btn2nd.isChecked()){
+                    dayselected  = btn2nd.getText().toString();
+                } else if (btn11th.isChecked()){
+                    dayselected  = btn11th.getText().toString();
+                }else if (btn21st.isChecked()){
+                    dayselected  = btn21st.getText().toString();
+                }
+
                 SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("month",travelMonthSelection);

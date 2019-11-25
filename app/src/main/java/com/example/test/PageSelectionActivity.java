@@ -18,6 +18,11 @@ public class PageSelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pageselection);
 
+//        getSupportActionBar().setTitle("Shecdule your travel");
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
         final Button btnDates=(Button)findViewById(R.id.buttonDates);
         final Button btnStateRoom = (Button)findViewById(R.id.btnStateRoom);
@@ -38,11 +43,11 @@ public class PageSelectionActivity extends AppCompatActivity {
             String showMonth = sharedPreferences.getString("month"," N/A ");
             String showDest = sharedPreferences.getString("dest"," N/A ");
             String showDepart = sharedPreferences.getString("depart","N/A");
-            String shawDay = sharedPreferences.getString("daySelected","N/A");
+            String showDay = sharedPreferences.getString("daySelected","N/A");
             txtDates.setText(showMonth);
             txtDest.setText(showDest);
             txtDepart.setText(showDepart);
-            txtday.setText(shawDay);
+            txtday.setText(showDay);
 
 
         }catch (Exception e){

@@ -1,5 +1,8 @@
 package com.example.test;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +20,8 @@ public class AccommodationPageActivity extends AppCompatActivity {
 
     int i = 1;
     int adults, children;
-    String excess = "If you would like to book more than 4 staterooms for the same cruise, please make multiple reservations.";
+    String test1, test2;
+    String excess = "If you would like to book more than 3 staterooms for the same cruise, please make multiple reservations.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +52,7 @@ public class AccommodationPageActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i <= 4) {
+                if (i <= 3) {
                     TableRow newSR = new TableRow(AccommodationPageActivity.this);
                     TextView txtSR = new TextView(AccommodationPageActivity.this);
                     TextView txtSR1 = new TextView(AccommodationPageActivity.this);
@@ -74,8 +78,13 @@ public class AccommodationPageActivity extends AppCompatActivity {
                         }
                     });
                     tblLayout.addView(newSR);
-                    adults = spin1.getSelectedItemPosition();
-                    children = spin2.getSelectedItemPosition();
+                    //adults = spin1.getSelectedItem().toString();
+                    int att = spin1.getSelectedItemPosition();
+
+                    test1 = spin1.getSelectedItem().toString();
+                    //children = spin2.getSelectedItemPosition();
+                    test2 = spin2.getSelectedItem().toString();
+
 
                     //if (adults + children)
 
@@ -100,8 +109,34 @@ public class AccommodationPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                try {
+                    SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    String showAccNumer = sharedPreferences.getString("accNumber"," N/A ");
+                    String showAdultsNumber = sharedPreferences.getString("adultsNumber"," N/A ");
+                    String showKidsNumber = sharedPreferences.getString("kidsNumber","N/A");
+                    //editor.putString("accNumber",travelMonthSelection);
 
-                finish();
+                    //editor.putString("adultsNumber",Integer.toString(adults));
+                    editor.putString("adultsNumber",test1);
+                    editor.putString("kidsNumber",test2);
+                    //editor.putString("kidsNumber",Integer.toString(children));
+
+                    editor.commit();
+
+
+
+                }catch (Exception e){
+
+                }
+
+
+
+
+                //finish();
+                Intent intent = new Intent(AccommodationPageActivity.this,PageSelectionActivity.class);
+                startActivity(intent);
+
             }
         });
 

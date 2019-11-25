@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -41,11 +42,15 @@ public class StateRoomTypeActivity extends AppCompatActivity {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(StateRoomTypeActivity.this, "testImageclick", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(StateRoomTypeActivity.this, "testImageclick", Toast.LENGTH_SHORT).show();
+                    Intent intentAdventure = new Intent(StateRoomTypeActivity.this,AdventurePackActivity.class);
+                    startActivity(intentAdventure);
+
+
                 }
             });
-            TextView txtName = view.findViewById(R.id.txt_adv_name);
-            TextView txtDeck = view.findViewById(R.id.txt_adv_info);
+            TextView txtName = view.findViewById(R.id.txt_room_info);
+            TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
             TextView txtPrice = view.findViewById(R.id.txt_price);
 
             imageView.setImageDrawable(getResources().getDrawable(stateRoomEntity.getImage()));

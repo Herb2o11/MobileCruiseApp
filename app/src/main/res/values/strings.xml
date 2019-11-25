@@ -92,6 +92,7 @@
     <string name="dateSelection_11th">11th</string>
     <string name="dateSelection_21st">21st</string>
     <string name="dateSelection_text_day">Select your desired period to travel</string>
+
     <string name="btnAft">Aft</string>
     <string name="btnMidShip">MidShip</string>
     <string name="btnForward">Forward</string>
@@ -110,7 +111,31 @@
     <string name="btnDeck1Forward1006">1006</string>
     <string name="btnDeck1Forward1008">1008</string>
     <string name="btnSubmitForwardDeck1">Next</string>
+    <string name="btnDeck1Forward2000">2000</string>
+    <string name="btnDeck1Forward2002">2002</string>
+    <string name="btnDeck1Forward2004">2004</string>
+    <string name="btnDeck1Forward2006">2006</string>
+    <string name="btnDeck1Forward2008">1008</string>
 
+    <string name="btnDeck1MidShip1010">1010</string>
+    <string name="btnDeck1MidShip1012">1012</string>
+    <string name="btnDeck1MidShip1014">1014</string>
+    <string name="btnDeck1MidShip1016">1016</string>
+
+    <string name="btnDeck1MidShip2010">2010</string>
+    <string name="btnDeck1MidShip2012">2012</string>
+    <string name="btnDeck1MidShip2014">2014</string>
+    <string name="btnDeck1MidShip2016">2016</string>
+
+    <string name="btnDeck1Aft1020">1020</string>
+    <string name="btnDeck1Aft1022">1022</string>
+    <string name="btnDeck1Aft1024">1024</string>
+    <string name="btnDeck1Aft1026">1026</string>
+
+    <string name="btnDeck2Aft2020">2020</string>
+    <string name="btnDeck2Aft2022">2022</string>
+    <string name="btnDeck2Aft2024">2024</string>
+    <string name="btnDeck2Aft2026">2026</string>
 
 
 </resources>

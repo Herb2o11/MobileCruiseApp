@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.test.SelectRoomForwardDeck1">
+    tools:context="com.example.test.SelectRoomForwardDeck2">
 
     <ImageView
         android:contentDescription=""
@@ -15,49 +15,49 @@
         />
 
     <Button
-        android:id="@+id/btnDeck1Forward1000"
+        android:id="@+id/btnDeck1Forward2000"
         android:layout_width="75dp"
         android:layout_height="37dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="380dp"
-        android:text="@string/btnDeck1Forward1000" />
+        android:text="@string/btnDeck1Forward2000" />
 
     <Button
-        android:id="@+id/btnDeck1Forward1002"
+        android:id="@+id/btnDeck1Forward2002"
         android:layout_width="77dp"
         android:layout_height="40dp"
         android:layout_marginTop="410dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:text="@string/btnDeck1Forward1002" />
+        android:text="@string/btnDeck1Forward2002" />
 
     <Button
-        android:id="@+id/btnDeck1Forward1004"
+        android:id="@+id/btnDeck1Forward2004"
         android:layout_width="77dp"
         android:layout_height="38dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="443dp"
-        android:text="@string/btnDeck1Forward1004" />
+        android:text="@string/btnDeck1Forward2004" />
 
     <Button
-        android:id="@+id/btnDeck1Forward1006"
+        android:id="@+id/btnDeck1Forward2006"
         android:layout_width="77dp"
         android:layout_height="38dp"
         android:layout_marginTop="472dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:text="@string/btnDeck1Forward1006" />
+        android:text="@string/btnDeck1Forward2006" />
 
     <Button
-        android:id="@+id/btnDeck1Forward1008"
+        android:id="@+id/btnDeck1Forward2008"
         android:layout_width="77dp"
         android:layout_height="38dp"
         android:layout_marginTop="472dp"
         android:layout_marginStart="135dp"
         android:layout_marginLeft="135dp"
-        android:text="@string/btnDeck1Forward1008"/>
+        android:text="@string/btnDeck1Forward2008"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -65,11 +65,8 @@
         android:layout_below="@id/imgDeck1Forward"
         android:layout_marginLeft="160dp"
         android:layout_marginStart="160dp"
-        android:id="@+id/btnSubmitForwardDeck1"
+        android:id="@+id/btnSubmitForwardDeck2"
         android:text="@string/btnSubmitForwardDeck1"
         />
 
 </RelativeLayout>
-
-
-

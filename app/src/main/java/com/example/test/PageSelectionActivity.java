@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.cruiseapp.AccommodationSelectionActivity;
 import com.example.cruiseapp.ConfirmSelectionActivity;
 
 public class PageSelectionActivity extends AppCompatActivity {
@@ -23,11 +24,11 @@ public class PageSelectionActivity extends AppCompatActivity {
 //        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
 //        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
-        final Button btnAccommodation = (Button) findViewById(R.id.buttonAccommodation);
-        final Button btnDates=(Button)findViewById(R.id.buttonDates);
-        final Button btnStateRoom = (Button)findViewById(R.id.btnStateRoom);
-        Button btnFindPrice=(Button)findViewById(R.id.btnFindPrice);
-        final Button btngoConfirm=(Button)findViewById(R.id.btnGoToConfimationPage);
+        final Button btnAccommodation =  findViewById(R.id.buttonAccommodation);
+        final Button btnDates=findViewById(R.id.buttonDates);
+        final Button btnStateRoom = findViewById(R.id.btnStateRoom);
+        Button btnFindPrice=findViewById(R.id.btnFindPrice);
+        final Button btngoConfirm= findViewById(R.id.btnGoToConfimationPage);
 
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
         final TextView txtDest = findViewById(R.id.txtDisplayDest);
@@ -49,7 +50,6 @@ public class PageSelectionActivity extends AppCompatActivity {
             txtDepart.setText(showDepart);
             txtday.setText(showDay);
 
-
         }catch (Exception e){
 
         }
@@ -58,7 +58,7 @@ public class PageSelectionActivity extends AppCompatActivity {
         btnAccommodation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAccommodation = new Intent(PageSelectionActivity.this, AccommodationPageActivity.class);
+                Intent intentAccommodation = new Intent(PageSelectionActivity.this, AccommodationSelectionActivity.class);
                 startActivity(intentAccommodation);
             }
         });

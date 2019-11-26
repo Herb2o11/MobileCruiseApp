@@ -101,7 +101,7 @@ public class PageSelectionActivity extends AppCompatActivity {
         btnFindPrice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shipLocationIntent= new Intent (PageSelectionActivity.this,ShipLocation.class);
+                Intent shipLocationIntent= new Intent (PageSelectionActivity.this, ShipLocationActivity.class);
                 startActivity(shipLocationIntent);
 
             }

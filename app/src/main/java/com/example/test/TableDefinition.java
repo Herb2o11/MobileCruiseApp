@@ -14,7 +14,7 @@ public class TableDefinition {
            "DROP TABLE IF EXISTS USERS";
 
     public static final String SQL_CREATE_DATES_TABLE =
-            "CREATE TABLE DATE (dateID integer primary key, month text, year date)";
+            "CREATE TABLE DATE (dateID integer primary key, month text, depart_dates text)";
 
     public static final String  SQL_DELETE_DATES_TABLE =
             "DROP TABLE IF EXISTS DATE";
@@ -25,7 +25,7 @@ public class TableDefinition {
 
     public static final String SQL_DELETE_STATEROOM_TABLE =
             "DROP TABLE IF EXISTS STATEROOM";
-/*
+
 
     public static final String SQL_CREATE_DESTINATION_TABLE =
             " CREATE TABLE DESTINATION (destinationId integer primary key, destination text, destinationValue)";
@@ -36,7 +36,7 @@ public class TableDefinition {
 
 
 
-
+/*
     public static final String SQL_CREATE_ACOMODATION_TRAVELPARTY_TABLE =
             "CREATE TABLE ACOMODATION_TRAVELPARTY(trvelPartyId integer primary key, stateRoomQtd integer, adultsQtd integer," +
                     "childrenQtd integer, childrenAge integer, accessibleRoom boolean, adultPrice float, childrenPrice float)";

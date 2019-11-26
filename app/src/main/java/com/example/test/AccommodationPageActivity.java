@@ -118,8 +118,8 @@ public class AccommodationPageActivity extends AppCompatActivity {
                     //editor.putString("accNumber",travelMonthSelection);
 
                     //editor.putString("adultsNumber",Integer.toString(adults));
-                    editor.putString("adultsNumber",test1);
-                    editor.putString("kidsNumber",test2);
+                    //editor.putString("adultsNumber",test1);
+                    //editor.putString("kidsNumber",test2);
                     //editor.putString("kidsNumber",Integer.toString(children));
 
                     editor.commit();

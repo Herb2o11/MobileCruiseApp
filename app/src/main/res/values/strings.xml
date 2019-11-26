@@ -111,7 +111,7 @@
     <string name="btnDeck1Forward1006">1006</string>
     <string name="btnDeck1Forward1008">1008</string>
     <string name="btnSubmitForwardDeck1">Next</string>
-<<<<<<< HEAD
+
     <string name="btnDeck1Forward2000">2000</string>
     <string name="btnDeck1Forward2002">2002</string>
     <string name="btnDeck1Forward2004">2004</string>
@@ -137,12 +137,17 @@
     <string name="btnDeck2Aft2022">2022</string>
     <string name="btnDeck2Aft2024">2024</string>
     <string name="btnDeck2Aft2026">2026</string>
-=======
+    =======
     <string name="btnGoState">Go to StateRoom</string>
     <string name="ConfirmStateRoom">Number(s) of Stareroom</string>
     <string name="ConfirmAdults">Number(s) of Adults</string>
     <string name="ConfirmKids">Number(s) of Children</string>
->>>>>>> 11afb963892904cb5b08da5961dda1042ddd38c2
+    <string name="AccSelection">Accommodation  Selection</string>
+    <string name="txtAdults">Adults</string>
+    <string name="txtChildren">Children</string>
+    <string name="addStateroom">Add Another Stateroom</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnReset">Clear All</string>
 
 
 </resources>

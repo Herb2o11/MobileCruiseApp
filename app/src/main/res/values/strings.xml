@@ -148,6 +148,7 @@
     <string name="addStateroom">Add Another Stateroom</string>
     <string name="btnSubmit">Submit</string>
     <string name="btnReset">Clear All</string>
+    <string name="ConfPageMessage">Check  your Selection</string>
 
 
 </resources>

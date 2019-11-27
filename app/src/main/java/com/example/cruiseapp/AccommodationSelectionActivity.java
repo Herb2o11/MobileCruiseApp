@@ -21,6 +21,8 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
     String adultsselected, childSelected;
 
     String selectedAdult1, selectedchild1;
+    String selectedAdult2, selectedchild2;
+    String nStateRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,7 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
                 // If nothing is selected from Radio Group, then it return -1
                 if (selectedRadioButtonIDAdult1 != -1) {
 
+                    nStateRoom = "1";
                     RadioButton selectedRadioButton = (RadioButton) findViewById(selectedRadioButtonIDAdult1);
                     selectedAdult1 = selectedRadioButton.getText().toString();
                 }
@@ -84,22 +87,46 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
                 // If nothing is selected from Radio Group, then it return -1
                 if (selectedRadioButtonIDChild1 != -1) {
 
-                    RadioButton selectedRadioButton1 = (RadioButton) findViewById(selectedRadioButtonIDChild1);
+                    RadioButton selectedRadioButton1 = findViewById(selectedRadioButtonIDChild1);
                     selectedchild1 = selectedRadioButton1.getText().toString();
                 }
 
 
-                //int adult1Selection = radio1Adult.getCheckedRadioButtonId();
 
-                adultsselected= selectedAdult1;
-                childSelected = selectedchild1;
 
-                //int child1Slection = radio1Child.getCheckedRadioButtonId();
-                //childSelected = String.valueOf(child1Slection);
-                //childSelected = selectedRadioButtonText;
+
+                try {
+                    if (radio2Adult.isActivated() && radio2Child.isActivated()) {
+                        nStateRoom = "2";
+                        int selectedRadioButtonIDAdult2 = radio2Adult.getCheckedRadioButtonId();
+                        // If nothing is selected from Radio Group, then it return -1
+                        if (selectedRadioButtonIDAdult2 != -1) {
+
+                            RadioButton selectedRadioButton = findViewById(selectedRadioButtonIDAdult2);
+                            selectedAdult2 = selectedRadioButton.getText().toString();
+                        }
+                    }
+
+                    int selectedRadioButtonIDChild2 = radio2Child.getCheckedRadioButtonId();
+                    if (selectedRadioButtonIDChild2 != -1) {
+
+                        RadioButton selectedRadioButton1 = findViewById(selectedRadioButtonIDChild2);
+                        selectedchild2 = selectedRadioButton1.getText().toString();
+                    }
+                } catch (Exception e) {
+
+                }
+
+                //adultsselected= selectedAdult1 +  selectedAdult2;
+                //childSelected = selectedchild1 + selectedchild2;
+
+                adultsselected= selectedAdult1 ;
+                childSelected = selectedchild1 ;
+
 
                 SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("nState",nStateRoom);
                 editor.putString("adults",adultsselected);
                 editor.putString("kids",childSelected);
 
@@ -107,9 +134,6 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(AccommodationSelectionActivity.this, PageSelectionActivity.class);
                 startActivity(intent);
-
-
-
             }
         });
 
@@ -120,6 +144,8 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
                 radio2Child.setVisibility(View.VISIBLE);
                 txt2Adult.setVisibility(View.VISIBLE);
                 txt2Child.setVisibility(View.VISIBLE);
+
+
 
             }
         });

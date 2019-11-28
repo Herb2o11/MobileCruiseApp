@@ -43,9 +43,9 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
             String showDest = sharedPreferences.getString("dest"," N/A ");
             String showDepart = sharedPreferences.getString("depart","N/A");
             String showDay = sharedPreferences.getString("daySelected","N/A");
-            String showstate = sharedPreferences.getString("accNumber"," N/A ");
-            String showadults = sharedPreferences.getString("adultsNumber","N/A");
-            String showKids = sharedPreferences.getString("kidsNumber","N/A");
+            String showstate = sharedPreferences.getString("nState"," N/A ");
+            String showadults = sharedPreferences.getString("adults","N/A");
+            String showKids = sharedPreferences.getString("kids","N/A");
 
 
             txtConfirmMonth.setText(showMonth);

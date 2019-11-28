@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ShipLocation extends AppCompatActivity {
+public class ShipLocationActivity extends AppCompatActivity {
     Button btnAft, btnMid, btnForward, btnDeck1Aft, btnDeck2Aft, btnDeck1Mid, btnDeck2Mid,
             btnDeck1Forward, btnDeck2Forward;
 
@@ -76,7 +76,7 @@ public class ShipLocation extends AppCompatActivity {
         btnDeck1Forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iForwardDeck1=new Intent(ShipLocation.this, SelectRoomForwardDeck1.class);
+                Intent iForwardDeck1=new Intent(ShipLocationActivity.this, SelectRoomForwardDeck1Activity.class);
                 startActivity(iForwardDeck1);
             }
         });
@@ -84,7 +84,7 @@ public class ShipLocation extends AppCompatActivity {
         btnDeck2Forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iForwardDeck2=new Intent(ShipLocation.this, SelectRoomForwardDeck2.class);
+                Intent iForwardDeck2=new Intent(ShipLocationActivity.this, SelectRoomForwardDeck2Activity.class);
                 startActivity(iForwardDeck2);
             }
         });
@@ -92,7 +92,7 @@ public class ShipLocation extends AppCompatActivity {
         btnDeck1Mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iMidDeck1=new Intent(ShipLocation.this, SelectRoomMidShipDeck1.class);
+                Intent iMidDeck1=new Intent(ShipLocationActivity.this, SelectRoomMidShipDeck1Activity.class);
                 startActivity(iMidDeck1);
             }
         });
@@ -100,7 +100,7 @@ public class ShipLocation extends AppCompatActivity {
         btnDeck2Mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iMidDeck2=new Intent(ShipLocation.this, SelectRoomMidShipDeck2.class);
+                Intent iMidDeck2=new Intent(ShipLocationActivity.this, SelectRoomMidShipDeck2Activity.class);
                 startActivity(iMidDeck2);
             }
         });
@@ -108,7 +108,7 @@ public class ShipLocation extends AppCompatActivity {
         btnDeck1Aft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iAftDeck1=new Intent(ShipLocation.this, SelectRoomAftDeck.class);
+                Intent iAftDeck1=new Intent(ShipLocationActivity.this, SelectRoomAftDeck.class);
                 startActivity(iAftDeck1);
             }
         });
@@ -116,7 +116,7 @@ public class ShipLocation extends AppCompatActivity {
         btnDeck2Aft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iAftDeck2=new Intent(ShipLocation.this, SelectRoomAftDeck2.class);
+                Intent iAftDeck2=new Intent(ShipLocationActivity.this, SelectRoomAftDeck2.class);
                 startActivity(iAftDeck2);
             }
         });

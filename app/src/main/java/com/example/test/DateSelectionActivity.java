@@ -67,10 +67,6 @@ public class DateSelectionActivity extends AppCompatActivity {
         btn21st = findViewById(R.id.checkBoxDay21st);
 
 
-
-
-
-
         btnDoneDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

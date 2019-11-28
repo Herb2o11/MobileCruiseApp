@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectRoomAftDeck2"></activity>
+        <activity android:name="com.example.cruiseapp.AccommodationSelectionActivity"></activity>
+        <activity android:name=".SelectRoomAftDeck2" />
         <activity android:name=".SelectRoomAftDeck" />
-        <activity android:name=".SelectRoomMidShipDeck2" />
-        <activity android:name=".SelectRoomMidShipDeck1" />
-        <activity android:name=".SelectRoomForwardDeck2" />
-        <activity android:name=".SelectRoomForwardDeck1" />
+        <activity android:name=".SelectRoomMidShipDeck2Activity" />
+        <activity android:name=".SelectRoomMidShipDeck1Activity" />
+        <activity android:name=".SelectRoomForwardDeck2Activity" />
+        <activity android:name=".SelectRoomForwardDeck1Activity" />
         <activity android:name="com.example.cruiseapp.ConfirmSelectionActivity" />
         <activity android:name=".AdventurePackActivity" />
-        <activity android:name=".ShipLocation" />
+        <activity android:name=".ShipLocationActivity" />
         <activity android:name=".StateRoomTypeActivity" />
         <activity
             android:name=".Register"

@@ -137,11 +137,13 @@
     <string name="btnDeck2Aft2022">2022</string>
     <string name="btnDeck2Aft2024">2024</string>
     <string name="btnDeck2Aft2026">2026</string>
-    =======
+
+
     <string name="btnGoState">Go to StateRoom</string>
     <string name="ConfirmStateRoom">Number(s) of Stareroom</string>
     <string name="ConfirmAdults">Number(s) of Adults</string>
     <string name="ConfirmKids">Number(s) of Children</string>
+
     <string name="AccSelection">Accommodation  Selection</string>
     <string name="txtAdults">Adults</string>
     <string name="txtChildren">Children</string>

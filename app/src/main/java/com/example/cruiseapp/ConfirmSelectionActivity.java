@@ -67,7 +67,7 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
         final TextView txtConfirmKids = findViewById(R.id.txtNumberKids);
 
 
- //        getSupportActionBar().setTitle("Shecdule your travel");
+ //        getSupportActionBar().setTitle("Schedule your travel");
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
 //        getSupportActionBar().setDisplayUseLogoEnabled(true);

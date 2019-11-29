@@ -151,6 +151,12 @@
     <string name="btnSubmit">Submit</string>
     <string name="btnReset">Clear All</string>
     <string name="ConfPageMessage">Check  your Selection</string>
+    <string name="CardDetails">Card Details</string>
+    <string name="CardN">Card Number</string>
+    <string name="expDate">Expire Date</string>
+    <string name="cvvTextView">CVV</string>
+    <string name="payment">Submit Payment</string>
+    <string name="amtToPay">Amount to be paid</string>
 
 
 </resources>

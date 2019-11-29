@@ -1,6 +1,8 @@
 package com.example.test;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,9 +38,30 @@ import android.widget.Toast;
                     // not doing the checking
                     boolean loginOK = db.checkLogin(etEmail.getText().toString(), etPassword.getText().toString());
                     if (loginOK) {
-                        Intent goPage2 = new Intent(LoginActivity.this, PageSelectionActivity.class);
-                        startActivity(goPage2);
-                        finish();
+
+
+                        new AlertDialog.Builder(LoginActivity.this)
+                                .setIcon(android.R.drawable.btn_plus)
+                                .setTitle("Do you have package, already?")
+                                .setMessage("Click yes if you have already purchased")
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Intent intentToExistingPage= new Intent(LoginActivity.this, ExistingUserActivity.class);
+                                        startActivity(intentToExistingPage);
+                                        finish();
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Intent goPage2 = new Intent(LoginActivity.this, PageSelectionActivity.class);
+                                        startActivity(goPage2);
+                                        finish();
+                                    }
+                                })
+                                .show();
+
                     } else if (etEmail.length() == 0 || etPassword.length() == 0) {
                         Toast.makeText(LoginActivity.this, "Please Enter Email, and Password", Toast.LENGTH_LONG).show();
                     } else {

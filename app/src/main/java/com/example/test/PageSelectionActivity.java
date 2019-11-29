@@ -1,10 +1,16 @@
 package com.example.test;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +19,26 @@ import com.example.cruiseapp.AccommodationSelectionActivity;
 import com.example.cruiseapp.ConfirmSelectionActivity;
 
 public class PageSelectionActivity extends AppCompatActivity {
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater=getMenuInflater();
+        menuInflater.inflate(R.menu.redirection_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        if(item.getItemId()==R.id.go_to_Existing){
+            Intent intent=new Intent(getApplicationContext(), ExistingUserActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return false;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +62,10 @@ public class PageSelectionActivity extends AppCompatActivity {
         final TextView txtday = findViewById(R.id.txtDisplayDay);
 
 
+
         Button btnDestination=(Button)findViewById(R.id.buttonDestinations);
         Button btnDepart=(Button)findViewById(R.id.buttonDepart);
+
 
         try {
             SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);

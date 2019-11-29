@@ -31,7 +31,6 @@
         <activity android:name=".DateSelectionActivity" />
         <activity android:name=".DeparturePageActivity" />
         <activity android:name=".DestinationPageActivity" />
-        <activity android:name=".AccommodationPageActivity" />
         <activity android:name=".PageSelectionActivity" />
         <activity
             android:name=".Welcome"

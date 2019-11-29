@@ -21,10 +21,10 @@ public AccomodationTravelPartyDAO (Context context) {super (context);}
         SQLiteDatabase myData = this.getWritableDatabase();
         ContentValues contentValues =new ContentValues();
         contentValues.put("roomId",accomodationTravelPartyEntity.getRoomId());
-        contentValues.put("dateId",accomodationTravelPartyEntity.getDateId());
-        contentValues.put("destinationId",accomodationTravelPartyEntity.getDestinationId());
-        contentValues.put("UserId",accomodationTravelPartyEntity.getUserId());
-        contentValues.put("stateroomQtd",accomodationTravelPartyEntity.getStateroomQtd());
+        //contentValues.put("dateId",accomodationTravelPartyEntity.getDateId());
+       // contentValues.put("destinationId",accomodationTravelPartyEntity.getDestinationId());
+       // contentValues.put("UserId",accomodationTravelPartyEntity.getUserId());
+       contentValues.put("stateroomQtd",accomodationTravelPartyEntity.getStateroomQtd());
         contentValues.put("adultsQtd",accomodationTravelPartyEntity.getAdultsQtd());
         contentValues.put("childrenQtd",accomodationTravelPartyEntity.getChildrenQtd());
         contentValues.put("childrenAge",accomodationTravelPartyEntity.getChildrenAge());

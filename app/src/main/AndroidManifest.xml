@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.cruiseapp.AccommodationSelectionActivity"></activity>
+        <activity android:name="com.example.cruiseapp.PaymentDetailsActivity"></activity>
+        <activity android:name="com.example.cruiseapp.AccommodationSelectionActivity" />
         <activity android:name=".SelectRoomAftDeck2" />
         <activity android:name=".SelectRoomAftDeck" />
         <activity android:name=".SelectRoomMidShipDeck2Activity" />

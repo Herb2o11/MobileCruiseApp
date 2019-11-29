@@ -23,6 +23,8 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
     String selectedAdult1, selectedchild1;
     String selectedAdult2, selectedchild2;
     String nStateRoom;
+    int valueAdult1, valueChild1, valueAdult2, valueChild2;
+    int totalA, totalC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,7 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
                     nStateRoom = "1";
                     RadioButton selectedRadioButton = (RadioButton) findViewById(selectedRadioButtonIDAdult1);
                     selectedAdult1 = selectedRadioButton.getText().toString();
+                    valueAdult1 = Integer.parseInt(selectedAdult1);
                 }
 
                 int selectedRadioButtonIDChild1 = radio1Child.getCheckedRadioButtonId();
@@ -89,39 +92,45 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
 
                     RadioButton selectedRadioButton1 = findViewById(selectedRadioButtonIDChild1);
                     selectedchild1 = selectedRadioButton1.getText().toString();
+                    valueChild1 = Integer.parseInt(selectedchild1);
                 }
 
 
-
-
-
                 try {
-                    if (radio2Adult.isActivated() && radio2Child.isActivated()) {
-                        nStateRoom = "2";
+                    //if (radio2Adult.isActivated() && radio2Child.isActivated()) {
+                        //nStateRoom = "2";
                         int selectedRadioButtonIDAdult2 = radio2Adult.getCheckedRadioButtonId();
                         // If nothing is selected from Radio Group, then it return -1
                         if (selectedRadioButtonIDAdult2 != -1) {
 
                             RadioButton selectedRadioButton = findViewById(selectedRadioButtonIDAdult2);
                             selectedAdult2 = selectedRadioButton.getText().toString();
+                            valueAdult2 = Integer.parseInt(selectedAdult2);
                         }
-                    }
+                    //}
 
                     int selectedRadioButtonIDChild2 = radio2Child.getCheckedRadioButtonId();
                     if (selectedRadioButtonIDChild2 != -1) {
 
                         RadioButton selectedRadioButton1 = findViewById(selectedRadioButtonIDChild2);
                         selectedchild2 = selectedRadioButton1.getText().toString();
-                    }
-                } catch (Exception e) {
+                        valueChild2 = Integer.parseInt(selectedchild2);
 
+
+                        if( valueAdult2 !=  0 || valueChild2 != 0 ){
+                            nStateRoom = "2";
+                        }
+                    }
+
+
+                } catch (Exception e) {
                 }
 
-                //adultsselected= selectedAdult1 +  selectedAdult2;
-                //childSelected = selectedchild1 + selectedchild2;
 
-                adultsselected= selectedAdult1 ;
-                childSelected = selectedchild1 ;
+                totalA = valueAdult1 + valueAdult2;
+                totalC = valueChild1 + valueChild2;
+                adultsselected= String.valueOf(totalA);
+                childSelected = String.valueOf(totalC); ;
 
 
                 SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);

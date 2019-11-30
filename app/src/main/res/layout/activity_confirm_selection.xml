@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="@string/ConfPageMessage"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +28,7 @@
         android:layout_marginRight="92dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.986"
@@ -45,6 +47,7 @@
         android:layout_marginRight="92dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.988"
@@ -60,6 +63,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="36dp"
         android:text="@string/btnDepart"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -71,6 +75,7 @@
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtConDest" />
 
@@ -82,6 +87,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="200dp"
         android:text="@string/btnAccommodation"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,6 +99,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="356dp"
         android:text="@string/btnDestination"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,6 +111,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="44dp"
         android:text="@string/btnDates"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -115,6 +123,7 @@
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,6 +147,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toEndOf="@+id/txtConMonth"
@@ -151,6 +161,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="16dp"
         android:text="@string/ConfirmStateRoom"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -162,6 +173,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="24dp"
         android:text="@string/ConfirmAdults"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -173,6 +185,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="20dp"
         android:text="@string/ConfirmKids"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -187,6 +200,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -205,6 +219,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.418"

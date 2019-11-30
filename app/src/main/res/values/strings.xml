@@ -157,6 +157,7 @@
     <string name="cvvTextView">CVV</string>
     <string name="payment">Submit Payment</string>
     <string name="amtToPay">Amount to be paid</string>
+    <string name="paymentSection">Payment Section</string>
 
 
 </resources>

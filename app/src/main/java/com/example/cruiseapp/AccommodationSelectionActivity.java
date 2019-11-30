@@ -118,7 +118,7 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
                 if (selectedRadioButtonIDAdult1 != -1) {
 
                     nStateRoom = "1";
-                    RadioButton selectedRadioButton = (RadioButton) findViewById(selectedRadioButtonIDAdult1);
+                    RadioButton selectedRadioButton = findViewById(selectedRadioButtonIDAdult1);
                     selectedAdult1 = selectedRadioButton.getText().toString();
                     valueAdult1 = Integer.parseInt(selectedAdult1);
                 }
@@ -155,9 +155,11 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
                         valueChild2 = Integer.parseInt(selectedchild2);
 
 
-                        if( valueAdult2 !=  0 || valueChild2 != 0 ){
-                            nStateRoom = "2";
-                        }
+
+                    }
+
+                    if( valueAdult2 !=  0 || valueChild2 != 0 ){
+                        nStateRoom = "2";
                     }
 
 
@@ -196,6 +198,26 @@ public class AccommodationSelectionActivity extends AppCompatActivity {
 
             }
         });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                radio1Adult.clearCheck();
+                radio2Adult.clearCheck();
+                radio1Child.clearCheck();
+                radio2Child.clearCheck();
+
+                //Turning second stateroom invisible again
+                radio2Adult.setVisibility(View.INVISIBLE);
+                radio2Child.setVisibility(View.INVISIBLE);
+                txt2Adult.setVisibility(View.INVISIBLE);
+                txt2Child.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
+
+
 
     }
 }

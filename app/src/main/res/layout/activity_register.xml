@@ -99,26 +99,14 @@
         />
 
     <Button
-        android:id="@+id/btnSingUpPage"
+        android:id="@+id/btnSignUp"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:text="@string/btnSignUpWelcome"
         android:layout_below="@id/etAddress"
-        android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        />
-    <Button
-        android:id="@+id/btnLogInWelcome"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnSingUpPage"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/btnLogInWelcome"
-        />
-
+        android:text="@string/btnSignUpWelcome" />
 
 
 </RelativeLayout>

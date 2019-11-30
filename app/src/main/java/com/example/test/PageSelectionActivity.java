@@ -5,28 +5,35 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.cruiseapp.AccommodationSelectionActivity;
 import com.example.cruiseapp.ConfirmSelectionActivity;
+import com.example.cruiseapp.db.CruiseDatabase;
+import com.example.cruiseapp.db.entities.User;
 
 public class PageSelectionActivity extends AppCompatActivity {
+
+    CruiseDatabase cruiseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pageselection);
 
-//        getSupportActionBar().setTitle("Shecdule your travel");
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setLogo(R.mipmap.icon_disneycastleb_round);
-//        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        cruiseDatabase = CruiseDatabase.getInstance(getApplicationContext());
 
-        final Button btnAccommodation =  findViewById(R.id.buttonAccommodation);
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        long id = sharedPref.getLong("ID", 0);
+
+        User user = cruiseDatabase.userDao().getUser(id);
+        Log.d("USER", user.getEmail());
+
+        final Button btnStateRoom =  findViewById(R.id.btnStateRoom);
         final Button btnDates=findViewById(R.id.buttonDates);
-        final Button btnStateRoom = findViewById(R.id.btnStateRoom);
         Button btnFindPrice=findViewById(R.id.btnFindPrice);
         final Button btngoConfirm= findViewById(R.id.btnGoToConfimationPage);
 
@@ -55,10 +62,10 @@ public class PageSelectionActivity extends AppCompatActivity {
         }
 
 
-        btnAccommodation.setOnClickListener(new View.OnClickListener() {
+        btnStateRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAccommodation = new Intent(PageSelectionActivity.this, AccommodationSelectionActivity.class);
+                Intent intentAccommodation = new Intent(PageSelectionActivity.this, StateRoomTypeActivity.class);
                 startActivity(intentAccommodation);
             }
         });
@@ -90,13 +97,6 @@ public class PageSelectionActivity extends AppCompatActivity {
             }
         });
 
-        btnStateRoom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent stateroomintent  = new Intent(PageSelectionActivity.this, StateRoomTypeActivity.class);
-                startActivity(stateroomintent);
-            }
-        });
 
         btnFindPrice.setOnClickListener(new View.OnClickListener() {
             @Override

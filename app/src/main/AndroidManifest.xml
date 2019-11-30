@@ -3,13 +3,15 @@
     package="com.example.test">
 
     <application
+        android:name="com.example.cruiseapp.CruiseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/ApplicationDisplayName"
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.cruiseapp.PaymentDetailsActivity"></activity>
+        <activity android:name=".InvoiceActivity"></activity>
+        <activity android:name="com.example.cruiseapp.PaymentDetailsActivity" />
         <activity android:name="com.example.cruiseapp.AccommodationSelectionActivity" />
         <activity android:name=".SelectRoomAftDeck2" />
         <activity android:name=".SelectRoomAftDeck" />
@@ -31,7 +33,6 @@
         <activity android:name=".DateSelectionActivity" />
         <activity android:name=".DeparturePageActivity" />
         <activity android:name=".DestinationPageActivity" />
-        <activity android:name=".AccommodationPageActivity" />
         <activity android:name=".PageSelectionActivity" />
         <activity
             android:name=".Welcome"
@@ -40,6 +41,10 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
     </application>

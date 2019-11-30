@@ -155,6 +155,19 @@
     <string name="cvvTextView">CVV</string>
     <string name="payment">Submit Payment</string>
     <string name="amtToPay">Amount to be paid</string>
+    <string name="fee">Fee</string>
+    <string name="number_of_children">Number of Children</string>
+    <string name="number_of_adults">Number of Adults</string>
+    <string name="stateroom_type">StateRoom Type</string>
+    <string name="stateroom_category">StateRoom Category</string>
+    <string name="departure_port">Departure Port</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="details">Details</string>
+    <string name="room_location_and_deck">Room Location and Deck</string>
+    <string name="item">Item</string>
+    <string name="stateroom_qtd">StateRoom QTD</string>
+    <string name="destination">Destination</string>
+    <string name="preference_file_key">cruise_preference</string>
 
 
 </resources>

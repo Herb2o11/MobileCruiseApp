@@ -54,7 +54,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void onBtnLoginClick(View v) {
         User user = cruiseDatabase.userDao().getUser(txtEmail.getText().toString());
-
         if(user != null) {
             if(user.getPassword().equals(txtPassword.getText().toString())) {
                 Intent goPage2 = new Intent(LoginActivity.this, PageSelectionActivity.class);

@@ -287,8 +287,8 @@
 
     <Button
         android:id="@+id/btnAccSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -305,8 +305,8 @@
 
     <Button
         android:id="@+id/btnAccClear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="101dp"
+        android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -337,5 +337,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnAccClear"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup4"
-        app:layout_constraintVertical_bias="0.741" />
+        app:layout_constraintVertical_bias="0.768" />
 </android.support.constraint.ConstraintLayout>

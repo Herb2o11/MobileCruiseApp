@@ -2,9 +2,12 @@ package com.example.cruiseapp.db.entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 
 @Entity(tableName = "acomodation_travel_party_table")
 public class AccomodationTravelParty {
+    @PrimaryKey(autoGenerate = true)
+    long id;
     @ColumnInfo(name="room_id")
     long roomId;
     @ColumnInfo(name="date_id")

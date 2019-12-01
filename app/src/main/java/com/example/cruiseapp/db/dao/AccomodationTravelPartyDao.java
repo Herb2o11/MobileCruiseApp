@@ -7,7 +7,9 @@ import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
 @Dao
-public interface AccodationTravelPartyDao {
+public interface AccomodationTravelPartyDao {
+
+
 
    // @Query("insert into acomodation_travel_party_table ")
 

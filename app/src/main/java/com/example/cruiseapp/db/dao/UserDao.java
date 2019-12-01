@@ -24,6 +24,8 @@ public interface UserDao {
     @Query("select * from users_table where email = :email limit 1")
     User getUser(String email);
 
+    //@Query("select id from acomodation_travel_party_table INNER JOIN " )
+
     @Insert(onConflict = IGNORE)
     long insertUser(User user);
 

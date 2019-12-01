@@ -140,9 +140,9 @@
 
 
     <string name="btnGoState">Go to StateRoom</string>
-    <string name="ConfirmStateRoom">Number(s) of Stareroom</string>
-    <string name="ConfirmAdults">Number(s) of Adults</string>
-    <string name="ConfirmKids">Number(s) of Children</string>
+    <string name="confirmShipLocation">Location in the Ship</string>
+    <string name="stateRoomCat">Stateroom Category</string>
+    <string name="stateRoomTypeConf">Stateroom Type</string>
 
     <string name="AccSelection">Accommodation  Selection</string>
     <string name="txtAdults">Adults</string>

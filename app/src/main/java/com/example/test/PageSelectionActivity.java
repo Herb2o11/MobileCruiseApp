@@ -93,7 +93,8 @@ public class PageSelectionActivity extends AppCompatActivity {
         btnStateRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAccommodation = new Intent(PageSelectionActivity.this, StateRoomTypeActivity.class);
+                //using the new type of selection for test
+                Intent intentAccommodation = new Intent(PageSelectionActivity.this, com.example.cruiseapp.ShipLocationActivity.class);
                 startActivity(intentAccommodation);
             }
         });

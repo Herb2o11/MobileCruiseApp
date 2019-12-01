@@ -15,7 +15,9 @@ import com.example.cruiseapp.db.entities.User;
         StateRoom.class
         },
           exportSchema = false,
+
           version = 7)
+
 public abstract class CruiseDatabase extends RoomDatabase {
     private static final String DB_NAME = "cruise_db";
     private static CruiseDatabase instance;

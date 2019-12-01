@@ -10,10 +10,10 @@
         android:roundIcon="@mipmap/icon_disney"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InvoiceActivity"></activity>
+        <activity android:name="com.example.cruiseapp.ShipLocationActivity"></activity>
+        <activity android:name=".InvoiceActivity" />
         <activity android:name="com.example.cruiseapp.PaymentDetailsActivity" />
-
-        <activity android:name=".ExistingUserActivity"></activity>
+        <activity android:name=".ExistingUserActivity" />
         <activity android:name="com.example.cruiseapp.AccommodationSelectionActivity" />
         <activity android:name=".SelectRoomAftDeck2" />
         <activity android:name=".SelectRoomAftDeck" />
@@ -44,9 +44,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
     </application>

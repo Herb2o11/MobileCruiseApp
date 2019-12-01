@@ -79,9 +79,9 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
             String showDest = sharedPreferences.getString("dest"," N/A ");
             String showDepart = sharedPreferences.getString("depart","N/A");
             String showDay = sharedPreferences.getString("daySelected","N/A");
-            String showstate = sharedPreferences.getString("nState"," N/A ");
-            String showadults = sharedPreferences.getString("adults","N/A");
-            String showKids = sharedPreferences.getString("kids","N/A");
+            String showstate = sharedPreferences.getString("selectedPart"," N/A ");
+            String showadults = sharedPreferences.getString("selectedRoom","N/A");
+            String showStateType = sharedPreferences.getString("State","N");
 
 
             txtConfirmMonth.setText(showMonth);
@@ -90,7 +90,7 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
             txtConfirmday.setText(showDay);
             txtConfirmAcc.setText(showstate);
             txtConfirmAdults.setText(showadults);
-            txtConfirmKids.setText(showKids);
+            txtConfirmKids.setText(showStateType);
 
 
 

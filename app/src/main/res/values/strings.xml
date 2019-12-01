@@ -157,6 +157,11 @@
     <string name="cvvTextView">CVV</string>
     <string name="payment">Submit Payment</string>
     <string name="amtToPay">Amount to be paid</string>
+    <string name="btnAdvanture">Advantures</string>
+    <string name="btnOrderWine">Order Drinks</string>
+    <string name="btnEditProfile">Edit Profile</string>
+    <string name="btnCancelTrip">Cancel Trip</string>
+    <string name="btnExit">Log Out</string>
 
 
 </resources>

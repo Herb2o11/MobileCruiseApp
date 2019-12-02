@@ -8,4 +8,8 @@
 25;Inside;Standard;Aft;2685.75;301;insidestateroom
 74;OceanView;Intermediate;Aft;3562.80;289;oceanviewstateroom
 43;Concierge;Standard;Mid;4051.42;388;conciergestateroom
-78;Concierge;Deluxe;Mid;6051.42;388;conciergestateroom
+78;Concierge;Deluxe;Mid;6051.42;391;conciergestateroom
+300;Concierge;Standard;Foward;4882.88;397;oceanviewstateroom
+69;Concierge;Intermediate;Foward;6882.88;407;oceanviewstateroom
+97;Inside;Standard;Foward;2450.88;367;oceanviewstateroom
+53;OceanView;Deluxe;Foward;3882.88;325;oceanviewstateroom

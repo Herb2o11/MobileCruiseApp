@@ -1,10 +1,14 @@
 package com.example.test;
 
+import android.renderscript.Sampler;
+import android.view.View;
+
 public class AdventurepackEntity {
 
     private int advImage ;
     private String name , description;
     private double advPrice;
+
 
     public AdventurepackEntity(int advImage, String name, String description, double advPrice) {
 
@@ -12,7 +16,11 @@ public class AdventurepackEntity {
         this.name = name;
         this.description = description;
         this.advPrice = advPrice;
+
+
     }
+
+
 
     public int getAdvImage() {
         return advImage;
@@ -44,6 +52,8 @@ public class AdventurepackEntity {
     public void setAdvPrice(double advPrice) {
         this.advPrice = advPrice;
     }
+
+
 }
 
 

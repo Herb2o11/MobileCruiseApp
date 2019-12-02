@@ -33,7 +33,9 @@ public class AdventurePackActivity extends AppCompatActivity {
         adventurePackageentities = Arrays.asList(
                 new AdventurepackEntity(R.drawable.alaskahummer,"Alaska Hummer Adventure", "Experience Ketchikan in luxury at your pace in a private Hummer H2® and a skilled driver-guide at your service.",650),
                 new AdventurepackEntity(R.drawable.alaskawhales1,"Alaska Whales and Science Adventure","Enjoy whale watching, glacier viewing and insightful science activities as you record observations and help out researchers",200),
-                new AdventurepackEntity(R.drawable.alaskanfishcamp1,"Alaske Fish Camp", "Angle for rockfish, red snapper, cod and even salmon before having your catch cooked as a part of a fish feast.",380)
+                new AdventurepackEntity(R.drawable.alaskanfishcamp1,"Alaske Fish Camp", "Angle for rockfish, red snapper, cod and even salmon before having your catch cooked as a part of a fish feast.",380),
+                new AdventurepackEntity(R.drawable.baveragetastings,"Baverage Tastings", "Discover libation tastings that take you from Amari to Whiskey—with an assortment of pleasurable beverages in between! ", 90)
+
         );
 
         for (AdventurepackEntity adventurepackEntity :adventurePackageentities){

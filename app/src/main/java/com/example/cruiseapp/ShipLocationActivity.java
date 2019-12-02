@@ -3,6 +3,8 @@ package com.example.cruiseapp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -28,147 +30,265 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 public class ShipLocationActivity extends AppCompatActivity {
     String stateType;
     String stateRoomPrice;
     String stateRoomCategory;
     String shipLoc;
 
+    CruiseDatabase cruiseDatabase;
+
+
+    LinearLayout linearLayout;
+    List<StateRoom> stateRoomEntities = new ArrayList<>();
+    NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ship_location2);
 
         //final RadioGroup radioSelectionType = findViewById(R.id.rdBtnGrpRoomCategory);
-        LinearLayout linearLayout;
-        List<StateRoom> stateRoomEntities = new ArrayList<>();
-        NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
 
-        CruiseDatabase cruiseDatabase;
 
         cruiseDatabase = CruiseDatabase.getInstance(getApplicationContext());
 
         linearLayout = findViewById(R.id.room_type_container);
+        final LayoutInflater inflater = getLayoutInflater();
 
-        Button btnForward=findViewById(R.id.btnForward);
-        Button btnMidShip=findViewById(R.id.btnMidShip);
-        Button btnAft=findViewById(R.id.btnAft);
+        final Button btnForward = findViewById(R.id.btnForward);
+        final Button btnMidShip = findViewById(R.id.btnMidShip);
+        final Button btnAft = findViewById(R.id.btnAft);
 
-        final RadioButton rbStandard=findViewById(R.id.radioButtonStandard);
-        final RadioButton rbIntermediate=findViewById(R.id.radioButtonIntermediate);
-        final RadioButton rbDelux=findViewById(R.id.radioButtonDelux);
+        final RadioButton rbStandard = findViewById(R.id.radioButtonStandard);
+        final RadioButton rbIntermediate = findViewById(R.id.radioButtonIntermediate);
+        final RadioButton rbDelux = findViewById(R.id.radioButtonDelux);
 
-        ScrollView svRooms=findViewById(R.id.scrollViewRooms);
+        ScrollView svRooms = findViewById(R.id.scrollViewRooms);
 
         btnForward.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
-                if (rbStandard.isChecked()){
 
-                }else if (rbIntermediate.isChecked()){
+                //Change button background
+                btnAft.setBackground(getResources().getDrawable(R.drawable.aft_custom_button));
+                btnForward.setBackground(getResources().getDrawable(R.drawable.forwardselected));
+                btnMidShip.setBackground(getResources().getDrawable(R.drawable.midship_custom_btn));
 
-                }else if(rbDelux.isChecked()){
 
-                }else{
-                    Toast.makeText(ShipLocationActivity.this, "Please choose category of the room", Toast.LENGTH_SHORT).show();
+//                shipLoc = "Forward";
+//                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.putString("locationInShip",shipLoc);
+//                editor.apply();
+
+
+                //clear list
+                stateRoomEntities.clear();
+                //Clear layout
+                linearLayout.removeAllViews();
+
+                stateRoomEntities = cruiseDatabase.stateRoomDao().getFowardStateRoom();
+
+                for (StateRoom stateRoom : stateRoomEntities) {
+                    View view = inflater.inflate(R.layout.state_room_row, linearLayout, false);
+
+                    ImageView imageView = view.findViewById(R.id.header_image);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intentAdventure = new Intent(ShipLocationActivity.this, PageSelectionActivity.class);
+                            startActivity(intentAdventure);
+
+                        }
+                    });
+
+                    TextView txtName = view.findViewById(R.id.txt_room_info);
+                    TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
+                    TextView txtPrice = view.findViewById(R.id.txt_price);
+
+                    imageView.setImageResource(getResources().getIdentifier(stateRoom.getPicId(), "drawable", getPackageName()));
+                    txtName.setText(stateRoom.getRoomCategory());
+                    txtDeck.setText(stateRoom.getRoomLocation());
+                    txtPrice.setText(numberFormat.format(stateRoom.getRoomPrice()));
+
+
+                    linearLayout.addView(view);
                 }
+
+
             }
+
+
         });
 
+
         btnMidShip.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
-                if (rbStandard.isChecked()){
 
-                }else if (rbIntermediate.isChecked()){
 
-                }else if(rbDelux.isChecked()){
+                //Change button background
+                btnAft.setBackground(getResources().getDrawable(R.drawable.aft_custom_button));
+                btnForward.setBackground(getResources().getDrawable(R.drawable.forward_custom_btn));
+                btnMidShip.setBackground(getResources().getDrawable(R.drawable.midshipselected));
 
-                }else{
+
+//                shipLoc = "Midship";
+//                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.putString("locationInShip",shipLoc);
+//                editor.apply();
+
+                if (rbStandard.isChecked()) {
+
+                } else if (rbIntermediate.isChecked()) {
+
+                } else if (rbDelux.isChecked()) {
+
+                } else {
                     Toast.makeText(ShipLocationActivity.this, "Please choose category of the room", Toast.LENGTH_SHORT).show();
+                }
+
+                //clear list
+                stateRoomEntities.clear();
+                //Clear layout
+                linearLayout.removeAllViews();
+
+
+                stateRoomEntities = cruiseDatabase.stateRoomDao().getMidStateRoom();
+                for (StateRoom stateRoom : stateRoomEntities) {
+                    View view = inflater.inflate(R.layout.state_room_row, linearLayout, false);
+
+                    ImageView imageView = view.findViewById(R.id.header_image);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intentAdventure = new Intent(ShipLocationActivity.this, PageSelectionActivity.class);
+                            startActivity(intentAdventure);
+
+                        }
+                    });
+                    TextView txtName = view.findViewById(R.id.txt_room_info);
+                    TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
+                    TextView txtPrice = view.findViewById(R.id.txt_price);
+
+                    imageView.setImageResource(getResources().getIdentifier(stateRoom.getPicId(), "drawable", getPackageName()));
+                    txtName.setText(stateRoom.getRoomCategory());
+                    txtDeck.setText(stateRoom.getRoomLocation());
+                    txtPrice.setText(numberFormat.format(stateRoom.getRoomPrice()));
+
+                    linearLayout.addView(view);
                 }
             }
         });
 
         btnAft.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
-                if (rbStandard.isChecked()){
 
-                }else if (rbIntermediate.isChecked()){
 
-                }else if(rbDelux.isChecked()){
+                //Change button background
+                btnAft.setBackground(getResources().getDrawable(R.drawable.aftselected));
+                btnForward.setBackground(getResources().getDrawable(R.drawable.forward_custom_btn));
+                btnMidShip.setBackground(getResources().getDrawable(R.drawable.midship_custom_btn));
 
-                }else{
+
+//                shipLoc = " Aft ";
+//                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.putString("locationInShip",shipLoc);
+//                editor.apply();
+
+                if (rbStandard.isChecked()) {
+
+                } else if (rbIntermediate.isChecked()) {
+
+                } else if (rbDelux.isChecked()) {
+
+                } else {
                     Toast.makeText(ShipLocationActivity.this, "Please choose category of the room", Toast.LENGTH_SHORT).show();
                 }
+
+                //clear list
+                stateRoomEntities.clear();
+                //Clear layout
+                linearLayout.removeAllViews();
+
+                stateRoomEntities = cruiseDatabase.stateRoomDao().getAftStateRoom();
+
+                for (StateRoom stateRoom : stateRoomEntities) {
+                    View view = inflater.inflate(R.layout.state_room_row, linearLayout, false);
+
+                    ImageView imageView = view.findViewById(R.id.header_image);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intentAdventure = new Intent(ShipLocationActivity.this, PageSelectionActivity.class);
+                            startActivity(intentAdventure);
+
+                        }
+                    });
+                    TextView txtName = view.findViewById(R.id.txt_room_info);
+                    TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
+                    TextView txtPrice = view.findViewById(R.id.txt_price);
+
+                    imageView.setImageResource(getResources().getIdentifier(stateRoom.getPicId(), "drawable", getPackageName()));
+                    txtName.setText(stateRoom.getRoomCategory());
+                    txtDeck.setText(stateRoom.getRoomLocation());
+                    txtPrice.setText(numberFormat.format(stateRoom.getRoomPrice()));
+
+
+                    linearLayout.addView(view);
+                }
+
+
             }
         });
 
-        LayoutInflater inflater = getLayoutInflater();
+        rbStandard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stateType = rbStandard.getText().toString();
+                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("stateType",stateType);
+                editor.apply();
+            }
+        });
 
+        rbIntermediate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stateType = rbIntermediate.getText().toString();
+                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("stateType",stateType);
+                editor.apply();
+            }
+        });
 
-
+        rbDelux.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stateType = rbDelux.getText().toString();
+                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("stateType",stateType);
+                editor.apply();
+            }
+        });
         stateRoomEntities = cruiseDatabase.stateRoomDao().getStateRooms();
 
-
-        for (StateRoom stateRoom : stateRoomEntities) {
-            View view = inflater.inflate(R.layout.state_room_row, linearLayout, false);
-
-
-
-
-            ImageView imageView = view.findViewById(R.id.header_image);
-            imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //inserting the selection of stateroom type
-                    try {
-                        RadioGroup radioSelectionType = findViewById(R.id.rdBtnGrpRoomCategory);
-                        //for the radiogroup
-                        int selectedRadioButtonType = radioSelectionType.getCheckedRadioButtonId();
-                        // If nothing is selected from Radio Group, then it return -1
-                        if (selectedRadioButtonType != -1) {
-
-
-                            RadioButton selectedRadioButton = findViewById(selectedRadioButtonType);
-                            stateType = selectedRadioButton.getText().toString();
-                            SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putString("State",stateType);
-                            editor.apply();
-
-                            Intent intentAdventure = new Intent(ShipLocationActivity.this, PageSelectionActivity.class);
-
-                            startActivity(intentAdventure);
-
-
-                        } else{
-                            Toast.makeText(ShipLocationActivity.this, "Select one category", Toast.LENGTH_SHORT).show();
-                        }
-                    }catch (Exception e) {
-                    }
-
-
-
-
-
-                }
-            });
-            TextView txtName = view.findViewById(R.id.txt_room_info);
-            TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
-            TextView txtPrice = view.findViewById(R.id.txt_price);
-
-            imageView.setImageResource(getResources().getIdentifier(stateRoom.getPicId(), "drawable", getPackageName()));
-            txtName.setText(stateRoom.getRoomCategory());
-            txtDeck.setText(stateRoom.getRoomLocation());
-            txtPrice.setText(numberFormat.format(stateRoom.getRoomPrice()));
-
-
-
-            linearLayout.addView(view);
-        }
 
     }
 }

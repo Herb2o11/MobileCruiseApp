@@ -62,9 +62,9 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
         final TextView txtConfirmDest = findViewById(R.id.txtConDest);
         final TextView txtConfirmDepart = findViewById(R.id.txtConDepart);
         final TextView txtConfirmday = findViewById(R.id.txtConDay);
-        final TextView txtConfirmAcc = findViewById(R.id.txtNumberSrateRoom);
+        final TextView txtEnterLoc = findViewById(R.id.txtLocationUnShip);
         final TextView txtConfirmAdults = findViewById(R.id.txtNumberAdults);
-        final TextView txtConfirmKids = findViewById(R.id.txtNumberKids);
+        final TextView txtStateDisplay = findViewById(R.id.txtStateType);
 
 
  //        getSupportActionBar().setTitle("Schedule your travel");
@@ -82,15 +82,16 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
             String showstate = sharedPreferences.getString("selectedPart"," N/A ");
             String showadults = sharedPreferences.getString("selectedRoom","N/A");
             String showStateType = sharedPreferences.getString("State","N");
+            String showState = sharedPreferences.getString("locationInShip","test");
 
 
             txtConfirmMonth.setText(showMonth);
             txtConfirmDest.setText(showDest);
             txtConfirmDepart.setText(showDepart);
             txtConfirmday.setText(showDay);
-            txtConfirmAcc.setText(showstate);
+            txtEnterLoc.setText(showstate);
             txtConfirmAdults.setText(showadults);
-            txtConfirmKids.setText(showStateType);
+            txtStateDisplay.setText(showState);
 
 
 

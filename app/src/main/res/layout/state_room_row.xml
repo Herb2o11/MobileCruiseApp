@@ -13,12 +13,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="Standard Room Measures : Sleeps: 3 to 4 Size: Approximately 184 sq. ft."
         android:textSize="12sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -52,7 +53,7 @@
         android:layout_marginTop="168dp"
         android:layout_marginBottom="8dp"
         android:text="Deck 2 - Category 11C"
-        android:textSize="10sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/txtroomdetails"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -79,13 +80,16 @@
         android:id="@+id/text_dummy_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+
+
         android:text="Starting From"
-
-
+        app:layout_constraintBottom_toTopOf="@+id/txt_stateroominfo"
         app:layout_constraintStart_toEndOf="@+id/txt_room_info"
-        app:layout_constraintTop_toBottomOf="@+id/header_image" />
+        app:layout_constraintTop_toBottomOf="@+id/header_image"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

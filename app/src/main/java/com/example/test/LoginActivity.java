@@ -57,11 +57,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(user != null) {
             if(user.getPassword().equals(txtPassword.getText().toString())) {
                 Intent goPage2 = new Intent(LoginActivity.this, PageSelectionActivity.class);
-                SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(
-                        getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putLong("ID", user.getId());
-                editor.commit();
+
+                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+                sharedPreferences.edit().clear().commit();
+
                 startActivity(goPage2);
                 finish();
             } else {

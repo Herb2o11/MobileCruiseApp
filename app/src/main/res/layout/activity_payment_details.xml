@@ -46,11 +46,11 @@
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:text="@string/cvvTextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
@@ -62,10 +62,12 @@
         android:ems="10"
         android:inputType="number"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etxtExpDateYear"
@@ -85,14 +87,14 @@
         android:id="@+id/etxtCVV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="188dp"
+        android:layout_marginTop="408dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnPayConfirmation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnPayConfirmation"
@@ -133,15 +135,15 @@
         android:id="@+id/etxtExpDateMonth"
         android:layout_width="72dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Month"
         android:inputType="number"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etxtCVV"
         app:layout_constraintEnd_toStartOf="@+id/etxtExpDateYear"
-        app:layout_constraintHorizontal_bias="0.651"
-        app:layout_constraintStart_toEndOf="@+id/textView25" />
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/etxtCardN" />
 
     <TextView
         android:id="@+id/textView28"

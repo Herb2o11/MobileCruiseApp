@@ -213,7 +213,7 @@
 
 
     <Button
-        android:id="@+id/btnacasda"
+        android:id="@+id/btnGoPayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView56"

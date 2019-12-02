@@ -76,12 +76,12 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
 
         try {
             SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
-            String showMonth = sharedPreferences.getString("month"," N/A ");
-            String showDest = sharedPreferences.getString("dest"," N/A ");
-            String showDepart = sharedPreferences.getString("depart","N/A");
-            String showDay = sharedPreferences.getString("daySelected","N/A");
-            String showState = sharedPreferences.getString("stateType","test");
-            String showLocation = sharedPreferences.getString("locationInShip","test");
+            String showMonth = sharedPreferences.getString("month"," ");
+            String showDest = sharedPreferences.getString("dest"," ");
+            String showDepart = sharedPreferences.getString("depart"," ");
+            String showDay = sharedPreferences.getString("daySelected"," ");
+            String showState = sharedPreferences.getString("stateType"," ");
+            String showLocation = sharedPreferences.getString("locationInShip"," ");
 
 
             txtConfirmMonth.setText(showMonth);

@@ -1,6 +1,7 @@
 package com.example.test;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -69,8 +70,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             user.setAddress(getAddressStr);
 
             cruiseDatabase.userDao().insertUser(user);
+            SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+            sharedPreferences.edit().clear().commit();
 
             Intent intent = new Intent(Register.this, PageSelectionActivity.class);
+
+
+
             startActivity(intent);
             finish();
             Toast.makeText(Register.this,"Registration Completed",Toast.LENGTH_LONG).show();

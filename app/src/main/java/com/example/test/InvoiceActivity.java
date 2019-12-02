@@ -9,7 +9,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.cruiseapp.PaymentDetailsActivity;
 
 public class InvoiceActivity extends AppCompatActivity {
 
@@ -52,9 +56,10 @@ public class InvoiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_invoice);
 
         TextView txtPriceShowOfRoom=findViewById(R.id.txtShowPriceOfRoom);
+        Button btnGoPay = findViewById(R.id.btnGoPayment);
         try {
             SharedPreferences sharedPreferences = getSharedPreferences("dataShared", Context.MODE_PRIVATE);
-            String showPrice = sharedPreferences.getString("price"," N/A ");
+            String showPrice = sharedPreferences.getString("price"," ");
 
 
             txtPriceShowOfRoom.setText(showPrice);
@@ -69,5 +74,15 @@ public class InvoiceActivity extends AppCompatActivity {
         }catch (Exception e){
 
         }
+
+        btnGoPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(InvoiceActivity.this, PaymentDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

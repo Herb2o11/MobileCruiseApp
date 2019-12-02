@@ -1,13 +1,10 @@
 package com.example.test;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -24,55 +21,23 @@ import java.util.List;
 
 
 public class AdventurePackActivity extends AppCompatActivity {
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.redirection_menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.go_to_Create:
-                Intent intentTOPageSelection=new Intent(getApplicationContext(), PageSelectionActivity.class);
-                startActivity(intentTOPageSelection);
-                return true;
-
-            case R.id.go_to_Existing:
-                Intent intentToExisting=new Intent(getApplicationContext(), ExistingUserActivity.class);
-                startActivity(intentToExisting);
-                return true;
-
-            default:
-                super.onOptionsItemSelected(item);
-        }
-        if(item.getItemId()==R.id.go_to_Existing){
-            Intent intent=new Intent(getApplicationContext(), ExistingUserActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        return false;
-    }
     LinearLayout linearLayout;
     List<AdventurepackEntity>adventurePackageentities = new ArrayList<>();
     NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
+    String advPackPrice, extraPrice;
+    Double totalPriceExtra, pricehammer , priceWhales, priceFish, priceBave;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure_pack);
-
-        Button btnaddextra=findViewById(R.id.btnaddextra);
-        final CheckBox checkBoxHummer=findViewById(R.id.checkBoxHummer);
-        final CheckBox checkWhales=findViewById(R.id.checkWhales);
-        final CheckBox checkBoxFishCamp=findViewById(R.id.checkBoxFishCamp);
-        final CheckBox checkBoxbaverages=findViewById(R.id.checkBoxbaverages);
-
+        final CheckBox checkHammer = findViewById(R.id.checkBoxHummer);
+        final CheckBox checkWahles = findViewById(R.id.checkWhales);
+        final CheckBox checkFish = findViewById(R.id.checkBoxFishCamp);
+        final CheckBox checkbaverage = findViewById(R.id.checkBoxbaverages);
+        final Button btnAddExtra = findViewById(R.id.btnaddextra);
 
         linearLayout = findViewById(R.id.adv_pack_container);
         LayoutInflater inflaterAdv = getLayoutInflater();
@@ -107,25 +72,61 @@ public class AdventurePackActivity extends AppCompatActivity {
             txtadvInfo.setText(adventurepackEntity.getDescription());
             txtadvPrice.setText(numberFormat.format(adventurepackEntity.getAdvPrice()));
 
+
+
+
             linearLayout.addView(view);
 
 
 
         }
+        if (checkHammer.isChecked()){
+            pricehammer = 650.0;
+            //priceWhales = 200.0;
+            //priceFish = 380.0;
+            //priceBave = 90.0;
 
-        btnaddextra.setOnClickListener(new View.OnClickListener() {
+        }
+        if (checkWahles.isChecked()){
+            //pricehammer = 650.0;
+            priceWhales = 200.0;
+            //priceFish = 380.0;
+            //priceBave = 90.0;
+
+        }
+        if (checkFish.isChecked()){
+            //pricehammer = 650.0;
+            //priceWhales = 200.0;
+            //priceFish = 380.0;
+            priceBave = 90.0;
+
+        }
+        if (checkbaverage.isChecked()){
+            //pricehammer = 650.0;
+            //priceWhales = 200.0;
+            //priceFish = 380.0;
+            priceBave = 90.0;
+
+        }
+
+        btnAddExtra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if ((checkBoxHummer.isChecked() || checkWhales.isChecked()) || (checkBoxFishCamp.isChecked() || checkBoxbaverages.isChecked())){
-                    Intent intentInvoice=new Intent(AdventurePackActivity.this, InvoiceActivity.class);
-                    startActivity(intentInvoice);
-                }else{
-                    Toast.makeText(AdventurePackActivity.this, "Please Choose One Of This Packages", Toast.LENGTH_SHORT).show();
+                try {
+                    totalPriceExtra = pricehammer + priceWhales + priceFish + priceBave;
+                    extraPrice = totalPriceExtra.toString();
+                }catch (Exception e){
+
                 }
+
+                SharedPreferences sharedPreferences = getSharedPreferences("dataShared",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("ExtraValue",extraPrice);
+                editor.apply();
+                Intent intent = new Intent(AdventurePackActivity.this,InvoiceActivity.class);
+                startActivity(intent);
             }
         });
-
-
 
     }
 }

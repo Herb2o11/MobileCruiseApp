@@ -74,16 +74,18 @@ public class PaymentDetailsActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("dataShared", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        eAmount = sharedPreferences.getString("ExtraValue","");
 
         editor.putString("cardNumber",eCardN);
         editor.putString("expireDateMonth",eMonth);
         editor.putString("expireDateYear",eYear);
+
         //editor.putString("CVV",eCVV);
 
         editor.commit();
 
         //Getting the total amount from the sharedpreferences
-
+        txtAmtFinal.setText(eAmount);
 
         btnPay.setOnClickListener(new View.OnClickListener() {
             @Override

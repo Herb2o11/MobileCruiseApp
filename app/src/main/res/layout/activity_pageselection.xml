@@ -7,7 +7,7 @@
     tools:context=".PageSelectionActivity">
 
     <Button
-        android:id="@+id/buttonAccommodation"
+        android:id="@+id/btnStateRoom"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,7 +17,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
 
-        android:text="@string/btnAccommodation"
+        android:text="STATEROOM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAccommodation"
+        app:layout_constraintTop_toBottomOf="@+id/btnStateRoom"
         app:layout_constraintVertical_bias="0.046" />
 
     <Button
@@ -78,24 +78,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonDestinations"
         app:layout_constraintVertical_bias="0.114" />
-
-    <Button
-        android:id="@+id/btnStateRoom"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="StateRoom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDepart"
-        app:layout_constraintVertical_bias="0.151" />
 
     <TextView
         android:id="@+id/txtDisplayMonth"
@@ -155,16 +137,16 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <Button
         android:id="@+id/btnGoToConfimationPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="96dp"
         android:text="go to confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

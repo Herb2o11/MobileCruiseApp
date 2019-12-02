@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class ExistingUserActivity extends AppCompatActivity {
+
+    Button btnLogOut;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,5 +51,20 @@ public class ExistingUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_existing_user);
+
+        btnLogOut=findViewById(R.id.btnExit);
+
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 }

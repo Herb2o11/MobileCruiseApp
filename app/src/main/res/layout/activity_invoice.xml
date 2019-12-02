@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.test.InvoiceActivity">
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView60"
+        android:text="@string/stateroom_type"
+         />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView47"
+        android:text="@string/number_of_adults" />
+
+
+    <TextView
+        android:id="@+id/txtNumberOfAdults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+       android:layout_toRightOf="@+id/textView55"
+        android:layout_below="@+id/textView38"
+
+        />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView61"
+
+        android:text="@string/destination"
+         />
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView57"
+
+        android:text="@string/room_location_and_deck" />
+
+
+    <TextView
+        android:id="@+id/txtRoomLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@+id/txtNumberOfChildren"
+        android:layout_toRightOf="@+id/textView58"
+        />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/departure_date"
+        android:layout_below="@+id/textView54"
+         />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="200dp"
+
+        android:text="@string/departure_port" />
+
+    <TextView
+        android:id="@+id/txtDeparturePort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@+id/txtRoomLocation"
+        android:layout_toRightOf="@+id/textView60"
+
+        />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView55"
+        android:text="@string/number_of_children" />
+
+    <TextView
+        android:id="@+id/txtNumberOfChildren"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@+id/txtNumberOfAdults"
+        android:layout_toRightOf="@+id/textView57"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView30"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/item" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+        tools:text="Disney Cruise" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/textView28"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Customer  Invoice"
+        />
+
+    <TextView
+        android:id="@+id/txtStateRoomQtd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="158dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView56"
+        android:text="@string/stateroom_qtd"
+        />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="89dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/textView47"
+        android:layout_below="@+id/textView30"
+
+        android:text="@string/details"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnacasda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView56"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:text="Payment" />
+
+
+
+
+</RelativeLayout>

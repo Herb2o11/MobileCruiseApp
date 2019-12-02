@@ -116,7 +116,7 @@
     <string name="btnDeck1Forward2002">2002</string>
     <string name="btnDeck1Forward2004">2004</string>
     <string name="btnDeck1Forward2006">2006</string>
-    <string name="btnDeck1Forward2008">1008</string>
+    <string name="btnDeck1Forward2008">2008</string>
 
     <string name="btnDeck1MidShip1010">1010</string>
     <string name="btnDeck1MidShip1012">1012</string>
@@ -140,9 +140,9 @@
 
 
     <string name="btnGoState">Go to StateRoom</string>
-    <string name="ConfirmStateRoom">Number(s) of Stareroom</string>
-    <string name="ConfirmAdults">Number(s) of Adults</string>
-    <string name="ConfirmKids">Number(s) of Children</string>
+    <string name="confirmShipLocation">Location in the Ship</string>
+    <string name="stateRoomCat">Stateroom Category</string>
+    <string name="stateRoomTypeConf">Stateroom Type</string>
 
     <string name="AccSelection">Accommodation  Selection</string>
     <string name="txtAdults">Adults</string>
@@ -157,11 +157,27 @@
     <string name="cvvTextView">CVV</string>
     <string name="payment">Submit Payment</string>
     <string name="amtToPay">Amount to be paid</string>
-    <string name="btnAdvanture">Advantures</string>
+
+    <string name="btnAdventure">Adventures</string>
     <string name="btnOrderWine">Order Drinks</string>
     <string name="btnEditProfile">Edit Profile</string>
     <string name="btnCancelTrip">Cancel Trip</string>
     <string name="btnExit">Log Out</string>
+
+    <string name="fee">Fee</string>
+    <string name="number_of_children">Number of Children</string>
+    <string name="number_of_adults">Number of Adults</string>
+    <string name="stateroom_type">StateRoom Type</string>
+    <string name="stateroom_category">StateRoom Category</string>
+    <string name="departure_port">Departure Port</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="details">Details</string>
+    <string name="room_location_and_deck">Room Location and Deck</string>
+    <string name="item">Item</string>
+    <string name="stateroom_qtd">StateRoom QTD</string>
+    <string name="destination">Destination</string>
+    <string name="preference_file_key">cruise_preference</string>
+    <string name="paymentSection">Payment Section</string>
 
 
 </resources>

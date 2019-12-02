@@ -14,6 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cruiseapp.db.CruiseDatabase;
+import com.example.cruiseapp.db.entities.StateRoom;
+
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,34 +58,32 @@ public class StateRoomTypeActivity extends AppCompatActivity {
     }
 
     LinearLayout linearLayout;
-    List<StateRoomEntity> stateRoomEntities = new ArrayList<>();
+    List<StateRoom> stateRoomEntities = new ArrayList<>();
     NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
+
+    CruiseDatabase cruiseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state_room_type2);
 
+        cruiseDatabase = CruiseDatabase.getInstance(getApplicationContext());
+
         linearLayout = findViewById(R.id.state_room_container);
         LayoutInflater inflater = getLayoutInflater();
 
-        stateRoomEntities = Arrays.asList(
-                new StateRoomEntity(R.drawable.insidestateroom, "Inside State Room", "These are our most spacious non-Concierge staterooms, each with a private verandah (some with partial views).", 2769.43),
-                new StateRoomEntity(R.drawable.oceanviewstateroom, "Ocean View State Room", "Unwind in roomy quarters adorned in a charming nautical motif, with a real porthole window—or possibly 2!", 3500.0),
-                new StateRoomEntity(R.drawable.conciergestateroom, "Concierge State Room", "Sail away in a generous-sized stateroom with a nautical motif and porthole mirror (no exterior view).", 1543.43)
-        );
+        stateRoomEntities = cruiseDatabase.stateRoomDao().getStateRooms();
 
-        for (StateRoomEntity stateRoomEntity : stateRoomEntities) {
+        for (StateRoom stateRoom : stateRoomEntities) {
             View view = inflater.inflate(R.layout.state_room_row, linearLayout, false);
 
             ImageView imageView = view.findViewById(R.id.header_image);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                  //  Toast.makeText(StateRoomTypeActivity.this, "testImageclick", Toast.LENGTH_SHORT).show();
                     Intent intentAdventure = new Intent(StateRoomTypeActivity.this,AdventurePackActivity.class);
                     startActivity(intentAdventure);
-
 
                 }
             });
@@ -90,10 +91,10 @@ public class StateRoomTypeActivity extends AppCompatActivity {
             TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
             TextView txtPrice = view.findViewById(R.id.txt_price);
 
-            imageView.setImageDrawable(getResources().getDrawable(stateRoomEntity.getImage()));
-            txtName.setText(stateRoomEntity.getName());
-            txtDeck.setText(stateRoomEntity.getDescription());
-            txtPrice.setText(numberFormat.format(stateRoomEntity.getPrice()));
+            imageView.setImageResource(getResources().getIdentifier(stateRoom.getPicId(), "drawable", getPackageName()));
+            txtName.setText(stateRoom.getRoomCategory());
+            txtDeck.setText(stateRoom.getRoomLocation());
+            txtPrice.setText(numberFormat.format(stateRoom.getRoomPrice()));
 
             linearLayout.addView(view);
         }

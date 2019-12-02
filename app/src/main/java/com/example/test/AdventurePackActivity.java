@@ -56,7 +56,7 @@ public class AdventurePackActivity extends AppCompatActivity {
             imageView.setImageDrawable(getResources().getDrawable(adventurepackEntity.getAdvImage()));
             txtAdvName.setText(adventurepackEntity.getName());
             txtadvInfo.setText(adventurepackEntity.getDescription());
-            txtadvPrice.setText(numberFormat.format(adventurepackEntity.getAdvImage()));
+            txtadvPrice.setText(numberFormat.format(adventurepackEntity.getAdvPrice()));
 
             linearLayout.addView(view);
 

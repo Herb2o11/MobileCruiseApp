@@ -90,6 +90,7 @@ public class StateRoomTypeActivity extends AppCompatActivity {
             TextView txtName = view.findViewById(R.id.txt_room_info);
             TextView txtDeck = view.findViewById(R.id.txt_stateroominfo);
             TextView txtPrice = view.findViewById(R.id.txt_price);
+            TextView txtDetails=view.findViewById(R.id.txtroomdetails);
 
             imageView.setImageResource(getResources().getIdentifier(stateRoom.getPicId(), "drawable", getPackageName()));
             txtName.setText(stateRoom.getRoomCategory());

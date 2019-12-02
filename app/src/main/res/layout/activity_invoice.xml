@@ -28,6 +28,16 @@
         android:layout_below="@+id/textView47"
         android:text="@string/number_of_adults" />
 
+    <TextView
+        android:id="@+id/txtShowPriceOfRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginStart="200dp"/>
+
+
+
 
     <TextView
         android:id="@+id/txtNumberOfAdults"

@@ -14,12 +14,6 @@
         <activity android:name="com.example.cruiseapp.PaymentDetailsActivity" />
         <activity android:name="com.example.cruiseapp.ShipLocationActivity" />
         <activity android:name=".InvoiceActivity" />
-        <activity android:name=".SelectRoomAftDeck2" />
-        <activity android:name=".SelectRoomAftDeck" />
-        <activity android:name=".SelectRoomMidShipDeck2Activity" />
-        <activity android:name=".SelectRoomMidShipDeck1Activity" />
-        <activity android:name=".SelectRoomForwardDeck2Activity" />
-        <activity android:name=".SelectRoomForwardDeck1Activity" />
         <activity android:name="com.example.cruiseapp.ConfirmSelectionActivity" />
         <activity android:name=".AdventurePackActivity" />
         <activity android:name=".ShipLocationActivity" />
@@ -30,7 +24,6 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".DateSelectionActivity" />
         <activity android:name=".DeparturePageActivity" />
         <activity android:name=".DestinationPageActivity" />

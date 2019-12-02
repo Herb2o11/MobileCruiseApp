@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.test.AdventurePackActivity;
 import com.example.test.ExistingUserActivity;
 import com.example.test.PageSelectionActivity;
 import com.example.test.R;
@@ -62,9 +63,9 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
         final TextView txtConfirmDest = findViewById(R.id.txtConDest);
         final TextView txtConfirmDepart = findViewById(R.id.txtConDepart);
         final TextView txtConfirmday = findViewById(R.id.txtConDay);
-        final TextView txtConfirmAcc = findViewById(R.id.txtNumberSrateRoom);
-        final TextView txtConfirmAdults = findViewById(R.id.txtNumberAdults);
-        final TextView txtConfirmKids = findViewById(R.id.txtNumberKids);
+        final TextView txtEnterLoc = findViewById(R.id.txtLocationUnShip);
+        final TextView txtStateDisplay = findViewById(R.id.txtStateType);
+
 
 
  //        getSupportActionBar().setTitle("Schedule your travel");
@@ -79,18 +80,16 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
             String showDest = sharedPreferences.getString("dest"," N/A ");
             String showDepart = sharedPreferences.getString("depart","N/A");
             String showDay = sharedPreferences.getString("daySelected","N/A");
-            String showstate = sharedPreferences.getString("selectedPart"," N/A ");
-            String showadults = sharedPreferences.getString("selectedRoom","N/A");
-            String showStateType = sharedPreferences.getString("State","N");
+            String showState = sharedPreferences.getString("stateType","test");
+            String showLocation = sharedPreferences.getString("locationInShip","test");
 
 
             txtConfirmMonth.setText(showMonth);
             txtConfirmDest.setText(showDest);
             txtConfirmDepart.setText(showDepart);
             txtConfirmday.setText(showDay);
-            txtConfirmAcc.setText(showstate);
-            txtConfirmAdults.setText(showadults);
-            txtConfirmKids.setText(showStateType);
+            txtEnterLoc.setText(showLocation);
+            txtStateDisplay.setText(showState);
 
 
 
@@ -108,7 +107,7 @@ public class ConfirmSelectionActivity extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConfirmSelectionActivity.this, StateRoomTypeActivity.class);
+                Intent intent = new Intent(ConfirmSelectionActivity.this, AdventurePackActivity.class);
                 startActivity(intent);
 
             }

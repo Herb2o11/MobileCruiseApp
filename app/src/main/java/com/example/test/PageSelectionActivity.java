@@ -60,7 +60,6 @@ public class PageSelectionActivity extends AppCompatActivity {
 
         final Button btnStateRoom =  findViewById(R.id.btnStateRoom);
         final Button btnDates=findViewById(R.id.buttonDates);
-        Button btnFindPrice=findViewById(R.id.btnFindPrice);
         final Button btngoConfirm= findViewById(R.id.btnGoToConfimationPage);
 
         final TextView txtDates = findViewById(R.id.txtDisplayMonth);
@@ -126,15 +125,6 @@ public class PageSelectionActivity extends AppCompatActivity {
             }
         });
 
-
-        btnFindPrice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent shipLocationIntent= new Intent (PageSelectionActivity.this, ShipLocationActivity.class);
-                startActivity(shipLocationIntent);
-
-            }
-        });
 
         btngoConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
